@@ -1,0 +1,278 @@
+openapi: 3.0.0
+info:
+  title: Qoodish API
+  description: |
+    Qoodih API.
+  version: 0.0.1
+tags:
+  - name: Maps
+    description: Manage maps.
+servers:
+  - url: https://api.qoodish.com
+security:
+  - firebaseAuth: []
+paths:
+  /maps:
+    post:
+      tags:
+        - Maps
+      summary: Create a new Map
+      description: |
+        Create a new Map.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewMap"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+    get:
+      tags:
+        - Maps
+      summary: List Maps
+      description: |
+        List Maps.
+      parameters:
+        - name: active
+          in: query
+          schema:
+            type: boolean
+          description: Filter active maps with this option.
+          example: true
+        - name: recent
+          in: query
+          schema:
+            type: boolean
+          description: Filter recent maps with this option.
+          example: true
+        - name: popular
+          in: query
+          schema:
+            type: boolean
+          description: Filter popular maps with this option.
+          example: true
+        - name: postable
+          in: query
+          schema:
+            type: boolean
+          description: Filter postable maps with this option.
+          example: true
+        - name: input
+          in: query
+          schema:
+            type: string
+          description: Search maps with map name.
+          example: "map name text"
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}:
+    put:
+      tags:
+        - Maps
+      summary: Update a Map
+      description: |
+        Update a new Map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewMap"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Maps
+      summary: Delete a Map
+      description: |
+        Delete a Map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    get:
+      tags:
+        - Maps
+      summary: Get Map detail
+      description: |
+        Get Map detail.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+components:
+  securitySchemes:
+    firebaseAuth:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: |
+        A valid id token of firebase user.
+  schemas:
+    NewMap:
+      type: object
+      description: User created Map object.
+      properties:
+        name:
+          type: string
+          example: My map
+        description:
+          type: string
+          example: This is description.
+        base_id:
+          type: string
+          example: ChIJl4BYvuq3t4kRfUzigrEUfUo
+        base_name:
+          type: string
+          example: This is map base name
+        private:
+          type: boolean
+          example: false
+        invitable:
+          type: boolean
+          example: true
+        shared:
+          type: boolean
+          example: true
+    MapDetail:
+      type: object
+      description: User created Map object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        owner_id:
+          type: integer
+          example: 1
+        owner_name:
+          type: string
+          example: this is owner name
+        owner_image_url:
+          type: string
+          example: https://owner-thumbnail-url
+        name:
+          type: string
+          example: My map
+        description:
+          type: string
+          example: This is description.
+        private:
+          type: boolean
+          example: false
+        base:
+          type: object
+          properties:
+            place_id:
+              type: string
+              example: ChIJl4BYvuq3t4kRfUzigrEUfUo
+            name:
+              type: string
+              example: place name
+            lat:
+              type: string
+              example: 35.7210375
+            lng:
+              type: string
+              example: "139.711489"
+        liked:
+          type: boolean
+          example: true
+        likes_count:
+          type: integer
+          example: 2
+        following:
+          type: boolean
+          example: true
+        followers_count:
+          type: integer
+          example: 10
+        editable:
+          type: boolean
+          example: true
+        postable:
+          type: boolean
+          example: true
+        shared:
+          type: boolean
+          example: true
+        invitable:
+          type: boolean
+          example: true
+        image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        thumbnail_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"

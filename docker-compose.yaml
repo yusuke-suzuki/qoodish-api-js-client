@@ -1,0 +1,14 @@
+version: "3"
+services:
+  generator:
+    image: openapitools/openapi-generator-cli
+    volumes:
+      - .:/local
+    command:
+      - generate
+      - -i
+      - /local/openapi.yaml
+      - -g
+      - javascript
+      - -o
+      - /local
