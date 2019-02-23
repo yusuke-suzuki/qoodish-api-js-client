@@ -1,23 +1,23 @@
-# QoodishApi.MapsApi
+# QoodishApi.UsersApi
 
 All URIs are relative to *https://api.qoodish.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mapsGet**](MapsApi.md#mapsGet) | **GET** /maps | List Maps
-[**mapsMapIdDelete**](MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
-[**mapsMapIdGet**](MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
-[**mapsMapIdPut**](MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
-[**mapsPost**](MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+[**usersGet**](UsersApi.md#usersGet) | **GET** /users | Search users
+[**usersPost**](UsersApi.md#usersPost) | **POST** /users | Sign in
+[**usersUserIdDelete**](UsersApi.md#usersUserIdDelete) | **DELETE** /users/{user_id} | Delete user account
+[**usersUserIdGet**](UsersApi.md#usersUserIdGet) | **GET** /users/{user_id} | Get user profile
+[**usersUserIdPut**](UsersApi.md#usersUserIdPut) | **PUT** /users/{user_id} | Update user profile
 
 
-<a name="mapsGet"></a>
-# **mapsGet**
-> [MapDetail] mapsGet(opts)
+<a name="usersGet"></a>
+# **usersGet**
+> [CurrentUser] usersGet(opts)
 
-List Maps
+Search users
 
-List Maps. 
+Search users with input text.
 
 ### Example
 ```javascript
@@ -29,15 +29,11 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
+let apiInstance = new QoodishApi.UsersApi();
 let opts = {
-  'active': true, // Boolean | Filter active maps with this option.
-  'recent': true, // Boolean | Filter recent maps with this option.
-  'popular': true, // Boolean | Filter popular maps with this option.
-  'postable': true, // Boolean | Filter postable maps with this option.
-  'input': mapnametext // String | Search maps with map name.
+  'input': username // String | Search users with user name.
 };
-apiInstance.mapsGet(opts, (error, data, response) => {
+apiInstance.usersGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -50,15 +46,11 @@ apiInstance.mapsGet(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **active** | **Boolean**| Filter active maps with this option. | [optional] 
- **recent** | **Boolean**| Filter recent maps with this option. | [optional] 
- **popular** | **Boolean**| Filter popular maps with this option. | [optional] 
- **postable** | **Boolean**| Filter postable maps with this option. | [optional] 
- **input** | **String**| Search maps with map name. | [optional] 
+ **input** | **String**| Search users with user name. | [optional] 
 
 ### Return type
 
-[**[MapDetail]**](MapDetail.md)
+[**[CurrentUser]**](CurrentUser.md)
 
 ### Authorization
 
@@ -69,13 +61,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="mapsMapIdDelete"></a>
-# **mapsMapIdDelete**
-> mapsMapIdDelete(mapId)
+<a name="usersPost"></a>
+# **usersPost**
+> CurrentUser usersPost(newUser)
 
-Delete a Map
+Sign in
 
-Delete a Map. 
+Sign in and get profile of current user.
 
 ### Example
 ```javascript
@@ -87,9 +79,57 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
-let mapId = 1; // Number | A valid Map ID.
-apiInstance.mapsMapIdDelete(mapId, (error, data, response) => {
+let apiInstance = new QoodishApi.UsersApi();
+let newUser = new QoodishApi.NewUser(); // NewUser | 
+apiInstance.usersPost(newUser, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newUser** | [**NewUser**](NewUser.md)|  | 
+
+### Return type
+
+[**CurrentUser**](CurrentUser.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="usersUserIdDelete"></a>
+# **usersUserIdDelete**
+> usersUserIdDelete(userId)
+
+Delete user account
+
+Delete user account.
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.UsersApi();
+let userId = 1; // Number | A valid User ID.
+apiInstance.usersUserIdDelete(userId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -102,7 +142,7 @@ apiInstance.mapsMapIdDelete(mapId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapId** | **Number**| A valid Map ID. | 
+ **userId** | **Number**| A valid User ID. | 
 
 ### Return type
 
@@ -117,13 +157,13 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="mapsMapIdGet"></a>
-# **mapsMapIdGet**
-> MapDetail mapsMapIdGet(mapId)
+<a name="usersUserIdGet"></a>
+# **usersUserIdGet**
+> CurrentUser usersUserIdGet(userId)
 
-Get Map detail
+Get user profile
 
-Get Map detail. 
+Get profile of target user.
 
 ### Example
 ```javascript
@@ -135,9 +175,9 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
-let mapId = 1; // Number | A valid Map ID.
-apiInstance.mapsMapIdGet(mapId, (error, data, response) => {
+let apiInstance = new QoodishApi.UsersApi();
+let userId = 1; // Number | A valid User ID.
+apiInstance.usersUserIdGet(userId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -150,11 +190,11 @@ apiInstance.mapsMapIdGet(mapId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapId** | **Number**| A valid Map ID. | 
+ **userId** | **Number**| A valid User ID. | 
 
 ### Return type
 
-[**MapDetail**](MapDetail.md)
+[**CurrentUser**](CurrentUser.md)
 
 ### Authorization
 
@@ -165,13 +205,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="mapsMapIdPut"></a>
-# **mapsMapIdPut**
-> MapDetail mapsMapIdPut(mapId, newMap)
+<a name="usersUserIdPut"></a>
+# **usersUserIdPut**
+> CurrentUser usersUserIdPut(userId, newUser)
 
-Update a Map
+Update user profile
 
-Update a new Map. 
+Update user profile.
 
 ### Example
 ```javascript
@@ -183,10 +223,10 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
-let mapId = 1; // Number | A valid Map ID.
-let newMap = new QoodishApi.NewMap(); // NewMap | 
-apiInstance.mapsMapIdPut(mapId, newMap, (error, data, response) => {
+let apiInstance = new QoodishApi.UsersApi();
+let userId = 1; // Number | A valid User ID.
+let newUser = new QoodishApi.NewUser(); // NewUser | 
+apiInstance.usersUserIdPut(userId, newUser, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -199,60 +239,12 @@ apiInstance.mapsMapIdPut(mapId, newMap, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapId** | **Number**| A valid Map ID. | 
- **newMap** | [**NewMap**](NewMap.md)|  | 
+ **userId** | **Number**| A valid User ID. | 
+ **newUser** | [**NewUser**](NewUser.md)|  | 
 
 ### Return type
 
-[**MapDetail**](MapDetail.md)
-
-### Authorization
-
-[firebaseAuth](../README.md#firebaseAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="mapsPost"></a>
-# **mapsPost**
-> MapDetail mapsPost(newMap)
-
-Create a new Map
-
-Create a new Map. 
-
-### Example
-```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
-// Configure API key authorization: firebaseAuth
-let firebaseAuth = defaultClient.authentications['firebaseAuth'];
-firebaseAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//firebaseAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new QoodishApi.MapsApi();
-let newMap = new QoodishApi.NewMap(); // NewMap | 
-apiInstance.mapsPost(newMap, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **newMap** | [**NewMap**](NewMap.md)|  | 
-
-### Return type
-
-[**MapDetail**](MapDetail.md)
+[**CurrentUser**](CurrentUser.md)
 
 ### Authorization
 

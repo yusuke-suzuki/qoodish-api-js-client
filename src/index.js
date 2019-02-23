@@ -13,10 +13,18 @@
 
 
 import ApiClient from './ApiClient';
+import CurrentUser from './model/CurrentUser';
+import InlineObject from './model/InlineObject';
+import InlineObject1 from './model/InlineObject1';
 import MapDetail from './model/MapDetail';
 import MapDetailBase from './model/MapDetailBase';
 import NewMap from './model/NewMap';
+import NewUser from './model/NewUser';
+import DevicesApi from './api/DevicesApi';
 import MapsApi from './api/MapsApi';
+import PushNotificationApi from './api/PushNotificationApi';
+import UserMapsApi from './api/UserMapsApi';
+import UsersApi from './api/UsersApi';
 
 
 /**
@@ -58,6 +66,24 @@ export {
     ApiClient,
 
     /**
+     * The CurrentUser model constructor.
+     * @property {module:model/CurrentUser}
+     */
+    CurrentUser,
+
+    /**
+     * The InlineObject model constructor.
+     * @property {module:model/InlineObject}
+     */
+    InlineObject,
+
+    /**
+     * The InlineObject1 model constructor.
+     * @property {module:model/InlineObject1}
+     */
+    InlineObject1,
+
+    /**
      * The MapDetail model constructor.
      * @property {module:model/MapDetail}
      */
@@ -76,8 +102,38 @@ export {
     NewMap,
 
     /**
+     * The NewUser model constructor.
+     * @property {module:model/NewUser}
+     */
+    NewUser,
+
+    /**
+    * The DevicesApi service constructor.
+    * @property {module:api/DevicesApi}
+    */
+    DevicesApi,
+
+    /**
     * The MapsApi service constructor.
     * @property {module:api/MapsApi}
     */
-    MapsApi
+    MapsApi,
+
+    /**
+    * The PushNotificationApi service constructor.
+    * @property {module:api/PushNotificationApi}
+    */
+    PushNotificationApi,
+
+    /**
+    * The UserMapsApi service constructor.
+    * @property {module:api/UserMapsApi}
+    */
+    UserMapsApi,
+
+    /**
+    * The UsersApi service constructor.
+    * @property {module:api/UsersApi}
+    */
+    UsersApi
 };
