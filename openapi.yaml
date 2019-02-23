@@ -5,13 +5,251 @@ info:
     Qoodih API.
   version: 0.0.1
 tags:
+  - name: Users
+    description: Manage user resources.
+  - name: Push Notification
+    description: Enable/Disable push notification.
+  - name: Devices
+    description: Manage User Devices
   - name: Maps
     description: Manage maps.
+  - name: User Maps
+    description: Manage user maps.
 servers:
   - url: https://api.qoodish.com
 security:
   - firebaseAuth: []
 paths:
+  /users:
+    post:
+      tags:
+        - Users
+      summary: Sign in
+      description: Sign in and get profile of current user.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewUser"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+    get:
+      tags:
+        - Users
+      summary: Search users
+      description: Search users with input text.
+      parameters:
+        - name: input
+          in: query
+          schema:
+            type: string
+          description: Search users with user name.
+          example: username
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CurrentUser"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /users/{user_id}:
+    get:
+      tags:
+        - Users
+      summary: Get user profile
+      description: Get profile of target user.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Invalid parameter specified.
+    put:
+      tags:
+        - Users
+      summary: Update user profile
+      description: Update user profile.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewUser"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Users
+      summary: Delete user account
+      description: Delete user account.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Request was successful.
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /users/{user_id}/push_notification:
+    post:
+      tags:
+        - Push Notification
+      summary: Enable push notification
+      description: Enable push notification.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                registration_token:
+                  type: string
+                  example: 12345abcdef
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+    delete:
+      tags:
+        - Push Notification
+      summary: Disable push notification
+      description: Disable push notification.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /users/devices:
+    post:
+      tags:
+        - Devices
+      summary: Register device
+      description: Register device with registration token.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                registration_token:
+                  type: string
+                  example: 12345abcdef
+        required: true
+      responses:
+        204:
+          description: Request was successful.
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /users/devices/{registration_token}:
+    delete:
+      tags:
+        - Devices
+      summary: Delete device
+      description: Delete device with registration token.
+      parameters:
+        - name: registration_token
+          in: path
+          required: true
+          description: A valid registration token.
+          example: 12345abcdef
+          schema:
+            type: string
+      responses:
+        204:
+          description: Request was successful.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
   /maps:
     post:
       tags:
@@ -72,7 +310,7 @@ paths:
           schema:
             type: string
           description: Search maps with map name.
-          example: "map name text"
+          example: mapnametext
       responses:
         200:
           description: Request was successful.
@@ -166,6 +404,40 @@ paths:
           description: Authentication has failed.
         404:
           description: Resource not found.
+  /users/{user_id}/maps:
+    get:
+      tags:
+        - User Maps
+      summary: Fetch user Maps
+      description: |
+        Fetch user created Maps.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+        - name: following
+          in: query
+          schema:
+            type: boolean
+          description: Filter following maps with this option.
+          example: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
 components:
   securitySchemes:
     firebaseAuth:
@@ -175,6 +447,68 @@ components:
       description: |
         A valid id token of firebase user.
   schemas:
+    NewUser:
+      type: object
+      description: User info from firebase.
+      properties:
+        uid:
+          type: string
+          example: AbcalmIsABCo5oTKD38RFABCnhL1
+        token:
+          type: string
+          example: 123456789abcdefg
+        display_name:
+          type: string
+          example: My name
+        biography:
+          type: string
+          example: My biography
+        image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+    CurrentUser:
+      type: object
+      description: Current user object from server
+      properties:
+        id:
+          type: integer
+          example: 1
+        uid:
+          type: string
+          example: AbcalmIsABCo5oTKD38RFABCnhL1
+        email:
+          type: string
+          example: example@qoodish.com
+        name:
+          type: string
+          example: My name
+        biography:
+          type: string
+          example: My biography
+        image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        thumbnail_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        file_name:
+          type: string
+          example: filename
+        maps_count:
+          type: integer
+          example: 10
+        following_maps_count:
+          type: integer
+          example: 10
+        reviews_count:
+          type: integer
+          example: 10
+        likes_count:
+          type: integer
+          example: 10
+        push_enabled:
+          type: boolean
+          example: true
     NewMap:
       type: object
       description: User created Map object.
