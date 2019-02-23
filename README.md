@@ -77,22 +77,16 @@ firebaseAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new QoodishApi.MapsApi()
-var opts = {
-  'active': true, // {Boolean} Filter active maps with this option.
-  'recent': true, // {Boolean} Filter recent maps with this option.
-  'popular': true, // {Boolean} Filter popular maps with this option.
-  'postable': true, // {Boolean} Filter postable maps with this option.
-  'input': map name text // {String} Search maps with map name.
-};
+var api = new QoodishApi.DevicesApi()
+var inlineObject1 = new QoodishApi.InlineObject1(); // {InlineObject1} 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
-api.mapsGet(opts, callback);
+api.usersDevicesPost(inlineObject1, callback);
 
 ```
 
@@ -102,18 +96,32 @@ All URIs are relative to *https://api.qoodish.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*QoodishApi.DevicesApi* | [**usersDevicesPost**](docs/DevicesApi.md#usersDevicesPost) | **POST** /users/devices | Register device
+*QoodishApi.DevicesApi* | [**usersDevicesRegistrationTokenDelete**](docs/DevicesApi.md#usersDevicesRegistrationTokenDelete) | **DELETE** /users/devices/{registration_token} | Delete device
 *QoodishApi.MapsApi* | [**mapsGet**](docs/MapsApi.md#mapsGet) | **GET** /maps | List Maps
 *QoodishApi.MapsApi* | [**mapsMapIdDelete**](docs/MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
 *QoodishApi.MapsApi* | [**mapsMapIdPut**](docs/MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
 *QoodishApi.MapsApi* | [**mapsPost**](docs/MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+*QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationDelete**](docs/PushNotificationApi.md#usersUserIdPushNotificationDelete) | **DELETE** /users/{user_id}/push_notification | Disable push notification
+*QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPost**](docs/PushNotificationApi.md#usersUserIdPushNotificationPost) | **POST** /users/{user_id}/push_notification | Enable push notification
+*QoodishApi.UserMapsApi* | [**usersUserIdMapsGet**](docs/UserMapsApi.md#usersUserIdMapsGet) | **GET** /users/{user_id}/maps | Fetch user Maps
+*QoodishApi.UsersApi* | [**usersGet**](docs/UsersApi.md#usersGet) | **GET** /users | Search users
+*QoodishApi.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Sign in
+*QoodishApi.UsersApi* | [**usersUserIdDelete**](docs/UsersApi.md#usersUserIdDelete) | **DELETE** /users/{user_id} | Delete user account
+*QoodishApi.UsersApi* | [**usersUserIdGet**](docs/UsersApi.md#usersUserIdGet) | **GET** /users/{user_id} | Get user profile
+*QoodishApi.UsersApi* | [**usersUserIdPut**](docs/UsersApi.md#usersUserIdPut) | **PUT** /users/{user_id} | Update user profile
 
 
 ## Documentation for Models
 
+ - [QoodishApi.CurrentUser](docs/CurrentUser.md)
+ - [QoodishApi.InlineObject](docs/InlineObject.md)
+ - [QoodishApi.InlineObject1](docs/InlineObject1.md)
  - [QoodishApi.MapDetail](docs/MapDetail.md)
  - [QoodishApi.MapDetailBase](docs/MapDetailBase.md)
  - [QoodishApi.NewMap](docs/NewMap.md)
+ - [QoodishApi.NewUser](docs/NewUser.md)
 
 
 ## Documentation for Authorization
