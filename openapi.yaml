@@ -8,17 +8,31 @@ tags:
   - name: Users
     description: Manage user resources.
   - name: Push Notification
-    description: Enable/Disable push notification.
+    description: Enable/disable push notification.
   - name: Devices
-    description: Manage User Devices
+    description: Manage user devices.
   - name: Maps
     description: Manage maps.
   - name: User Maps
     description: Manage user maps.
+  - name: Spots
+    description: Manage spots.
+  - name: Places
+    description: Manage places.
+  - name: Likes
+    description: Manage likes.
+  - name: Follows
+    description: Manage follows.
+  - name: Collaborators
+    description: Manage collaborators
+  - name: Issue Contents
+    description: Issue inappropriate contents
+
 servers:
   - url: https://api.qoodish.com
 security:
   - firebaseAuth: []
+
 paths:
   /users:
     post:
@@ -92,7 +106,7 @@ paths:
         401:
           description: Authentication has failed.
         404:
-          description: Invalid parameter specified.
+          description: Resource not found.
     put:
       tags:
         - Users
@@ -438,6 +452,274 @@ paths:
           description: Authentication has failed.
         404:
           description: Resource not found.
+  /spots:
+    get:
+      tags:
+        - Spots
+      summary: Fetch spots
+      description: |
+        Fetch spots.
+      parameters:
+        - name: popular
+          in: query
+          schema:
+            type: boolean
+          description: Filter popular spots with this option.
+          example: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Spot"
+        401:
+          description: Authentication has failed.
+  /spots/{place_id}:
+    get:
+      tags:
+        - Spots
+      summary: Fetch a spot
+      description: |
+        Fetch a spot.
+      parameters:
+        - name: place_id
+          in: path
+          required: true
+          description: A valid Place ID.
+          example: ChIJMxRrvBb-ml8RkRdpmMmn4WY
+          schema:
+            type: string
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Spot"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /maps/{map_id}/spots:
+    get:
+      tags:
+        - Spots
+      summary: Fetch spots on map
+      description: |
+        Fetch spots on target map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Spot"
+        401:
+          description: Authentication has failed.
+  /places:
+    get:
+      tags:
+        - Places
+      summary: Fetch places
+      description: |
+        Fetch places.
+      parameters:
+        - name: input
+          in: query
+          schema:
+            type: string
+          description: Filter places with input text.
+          example: 弘前
+        - name: lat
+          in: query
+          schema:
+            type: string
+          description: Search near by places.
+          example: 35.7210375
+        - name: lng
+          in: query
+          schema:
+            type: string
+          description: Search near by places.
+          example: 139.711489
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Place"
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}/collaborators:
+    get:
+      tags:
+        - Collaborators
+      summary: Fetch collaborators
+      description: |
+        Fetch collaborators on target map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Collaborator"
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}/like:
+    post:
+      tags:
+        - Likes
+      summary: Like map
+      description: |
+        Like taret map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Likes
+      summary: Unlike map
+      description: |
+        Unlike taret map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /maps/{map_id}/follow:
+    post:
+      tags:
+        - Follows
+      summary: Follow map
+      description: |
+        Follow target map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+        - name: invite_id
+          in: query
+          schema:
+            type: string
+          description: Follow from invite.
+          example: 1
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Follows
+      summary: Unfollow map
+      description: |
+        Unfollow taret map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MapDetail"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /inappropriate_contents:
+    post:
+      tags:
+        - Issue Contents
+      summary: Issue inappropriate content
+      description: |
+        Issue inappropriate content.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InappropreateContent"
+        required: true
+      responses:
+        204:
+          description: Request was successful.
+        401:
+          description: Authentication has failed.
+        400:
+          description: Invalid parameter specified.
 components:
   securitySchemes:
     firebaseAuth:
@@ -573,7 +855,7 @@ components:
               example: 35.7210375
             lng:
               type: string
-              example: "139.711489"
+              example: 139.711489
         liked:
           type: boolean
           example: true
@@ -610,3 +892,79 @@ components:
         updated_at:
           type: string
           example: "2019-02-19T08:19:32.000Z"
+    Spot:
+      type: object
+      description: Spot detail object.
+      properties:
+        place_id:
+          type: string
+          example: ChIJMxRrvBb-ml8RkRdpmMmn4WY
+        name:
+          type: string
+          example: 弘前市りんご公園
+        lat:
+          type: string
+          example: 40.58925869999999
+        lng:
+          type: string
+          example: 140.442092
+        formatted_address:
+          type: string
+          example: 日本、〒036-8262 青森県弘前市清水富田寺沢１２５
+        url:
+          type: string
+          example: https://maps.google.com/?cid=7413390945915836305
+        opening_hours:
+          type: string
+          example: '{"open_now":true,"periods":[{"close":{"day":0,"time":"1700"},"open":{"day":0,"time":"0900"}},{"close":{"day":1,"time":"1700"},"open":{"day":1,"time":"0900"}},{"close":{"day":2,"time":"1700"},"open":{"day":2,"time":"0900"}},{"close":{"day":3,"time":"1700"},"open":{"day":3,"time":"0900"}},{"close":{"day":4,"time":"1700"},"open":{"day":4,"time":"0900"}},{"close":{"day":5,"time":"1700"},"open":{"day":5,"time":"0900"}},{"close":{"day":6,"time":"1700"},"open":{"day":6,"time":"0900"}}],"weekday_text":["月曜日: 9時00分～17時00分","火曜日: 9時00分～17時00分","水曜日: 9時00分～17時00分","木曜日: 9時00分～17時00分","金曜日: 9時00分～17時00分","土曜日: 9時00分～17時00分","日曜日: 9時00分～17時00分"]}'
+        image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+    Place:
+      type: object
+      description: Place object.
+      properties:
+        description:
+          type: string
+          example: 弘前市りんご公園
+        place_id:
+          type: string
+          example: ChIJMxRrvBb-ml8RkRdpmMmn4WY
+    Collaborator:
+      type: object
+      description: Map collaborator object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: collaboratorname
+        profile_image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        owner:
+          type: boolean
+          example: false
+        editable:
+          type: boolean
+          example: false
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+    InappropreateContent:
+      type: object
+      description: Map collaborator object.
+      properties:
+        content_id:
+          type: integer
+          example: 1
+        content_type:
+          type: string
+          example: review
+        reason_id:
+          type: integer
+          example: 1
