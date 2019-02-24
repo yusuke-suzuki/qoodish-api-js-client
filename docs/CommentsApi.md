@@ -1,20 +1,20 @@
-# QoodishApi.FollowsApi
+# QoodishApi.CommentsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mapsMapIdFollowDelete**](FollowsApi.md#mapsMapIdFollowDelete) | **DELETE** /maps/{map_id}/follow | Unfollow map
-[**mapsMapIdFollowPost**](FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
+[**reviewsReviewIdCommentsCommentIdDelete**](CommentsApi.md#reviewsReviewIdCommentsCommentIdDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id} | Delete review comment
+[**reviewsReviewIdCommentsPost**](CommentsApi.md#reviewsReviewIdCommentsPost) | **POST** /reviews/{review_id}/comments | Send review comment
 
 
-<a name="mapsMapIdFollowDelete"></a>
-# **mapsMapIdFollowDelete**
-> MapDetail mapsMapIdFollowDelete(mapId)
+<a name="reviewsReviewIdCommentsCommentIdDelete"></a>
+# **reviewsReviewIdCommentsCommentIdDelete**
+> Review reviewsReviewIdCommentsCommentIdDelete(reviewId, commentId)
 
-Unfollow map
+Delete review comment
 
-Unfollow target map. 
+Delete review comment. 
 
 ### Example
 ```javascript
@@ -26,9 +26,10 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.FollowsApi();
-let mapId = 1; // Number | A valid Map ID.
-apiInstance.mapsMapIdFollowDelete(mapId, (error, data, response) => {
+let apiInstance = new QoodishApi.CommentsApi();
+let reviewId = 1; // Number | A valid Review ID.
+let commentId = 1; // Number | A valid Comment ID.
+apiInstance.reviewsReviewIdCommentsCommentIdDelete(reviewId, commentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -41,11 +42,12 @@ apiInstance.mapsMapIdFollowDelete(mapId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapId** | **Number**| A valid Map ID. | 
+ **reviewId** | **Number**| A valid Review ID. | 
+ **commentId** | **Number**| A valid Comment ID. | 
 
 ### Return type
 
-[**MapDetail**](MapDetail.md)
+[**Review**](Review.md)
 
 ### Authorization
 
@@ -56,13 +58,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="mapsMapIdFollowPost"></a>
-# **mapsMapIdFollowPost**
-> MapDetail mapsMapIdFollowPost(mapId, opts)
+<a name="reviewsReviewIdCommentsPost"></a>
+# **reviewsReviewIdCommentsPost**
+> Review reviewsReviewIdCommentsPost(reviewId, inlineObject2)
 
-Follow map
+Send review comment
 
-Follow target map. 
+Send review comment. 
 
 ### Example
 ```javascript
@@ -74,12 +76,10 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.FollowsApi();
-let mapId = 1; // Number | A valid Map ID.
-let opts = {
-  'inviteId': 1 // String | Follow from invite.
-};
-apiInstance.mapsMapIdFollowPost(mapId, opts, (error, data, response) => {
+let apiInstance = new QoodishApi.CommentsApi();
+let reviewId = 1; // Number | A valid Review ID.
+let inlineObject2 = new QoodishApi.InlineObject2(); // InlineObject2 | 
+apiInstance.reviewsReviewIdCommentsPost(reviewId, inlineObject2, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -92,12 +92,12 @@ apiInstance.mapsMapIdFollowPost(mapId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapId** | **Number**| A valid Map ID. | 
- **inviteId** | **String**| Follow from invite. | [optional] 
+ **reviewId** | **Number**| A valid Review ID. | 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | 
 
 ### Return type
 
-[**MapDetail**](MapDetail.md)
+[**Review**](Review.md)
 
 ### Authorization
 
@@ -105,6 +105,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

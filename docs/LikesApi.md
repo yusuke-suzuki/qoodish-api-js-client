@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**mapsMapIdLikeDelete**](LikesApi.md#mapsMapIdLikeDelete) | **DELETE** /maps/{map_id}/like | Unlike map
 [**mapsMapIdLikePost**](LikesApi.md#mapsMapIdLikePost) | **POST** /maps/{map_id}/like | Like map
+[**reviewsReviewIdCommentsCommentIdlikeDelete**](LikesApi.md#reviewsReviewIdCommentsCommentIdlikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}like | Unlike review comment
+[**reviewsReviewIdCommentsCommentIdlikePost**](LikesApi.md#reviewsReviewIdCommentsCommentIdlikePost) | **POST** /reviews/{review_id}/comments/{comment_id}like | Like review comment
+[**reviewsReviewIdLikeDelete**](LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
+[**reviewsReviewIdLikePost**](LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
 
 
 <a name="mapsMapIdLikeDelete"></a>
@@ -14,7 +18,7 @@ Method | HTTP request | Description
 
 Unlike map
 
-Unlike taret map. 
+Unlike target map. 
 
 ### Example
 ```javascript
@@ -62,7 +66,7 @@ Name | Type | Description  | Notes
 
 Like map
 
-Like taret map. 
+Like target map. 
 
 ### Example
 ```javascript
@@ -94,6 +98,202 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MapDetail**](MapDetail.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="reviewsReviewIdCommentsCommentIdlikeDelete"></a>
+# **reviewsReviewIdCommentsCommentIdlikeDelete**
+> Review reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId)
+
+Unlike review comment
+
+Unlike target review comment. 
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.LikesApi();
+let reviewId = 1; // Number | A valid Review ID.
+let commentId = 1; // Number | A valid Comment ID.
+apiInstance.reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reviewId** | **Number**| A valid Review ID. | 
+ **commentId** | **Number**| A valid Comment ID. | 
+
+### Return type
+
+[**Review**](Review.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="reviewsReviewIdCommentsCommentIdlikePost"></a>
+# **reviewsReviewIdCommentsCommentIdlikePost**
+> Review reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId)
+
+Like review comment
+
+Like target review comment. 
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.LikesApi();
+let reviewId = 1; // Number | A valid Review ID.
+let commentId = 1; // Number | A valid Comment ID.
+apiInstance.reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reviewId** | **Number**| A valid Review ID. | 
+ **commentId** | **Number**| A valid Comment ID. | 
+
+### Return type
+
+[**Review**](Review.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="reviewsReviewIdLikeDelete"></a>
+# **reviewsReviewIdLikeDelete**
+> Review reviewsReviewIdLikeDelete(reviewId)
+
+Unlike review
+
+Unlike target review. 
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.LikesApi();
+let reviewId = 1; // Number | A valid Review ID.
+apiInstance.reviewsReviewIdLikeDelete(reviewId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reviewId** | **Number**| A valid Review ID. | 
+
+### Return type
+
+[**Review**](Review.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="reviewsReviewIdLikePost"></a>
+# **reviewsReviewIdLikePost**
+> Review reviewsReviewIdLikePost(reviewId)
+
+Like review
+
+Like target review. 
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.LikesApi();
+let reviewId = 1; // Number | A valid Review ID.
+apiInstance.reviewsReviewIdLikePost(reviewId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reviewId** | **Number**| A valid Review ID. | 
+
+### Return type
+
+[**Review**](Review.md)
 
 ### Authorization
 

@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import MapDetail from '../model/MapDetail';
+import Review from '../model/Review';
 
 /**
 * Likes service.
@@ -44,7 +45,7 @@ export default class LikesApi {
 
     /**
      * Unlike map
-     * Unlike taret map. 
+     * Unlike target map. 
      * @param {Number} mapId A valid Map ID.
      * @param {module:api/LikesApi~mapsMapIdLikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MapDetail}
@@ -87,7 +88,7 @@ export default class LikesApi {
 
     /**
      * Like map
-     * Like taret map. 
+     * Like target map. 
      * @param {Number} mapId A valid Map ID.
      * @param {module:api/LikesApi~mapsMapIdLikePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MapDetail}
@@ -115,6 +116,190 @@ export default class LikesApi {
       let returnType = MapDetail;
       return this.apiClient.callApi(
         '/maps/{map_id}/like', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdlikeDelete operation.
+     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikeDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Review} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Unlike review comment
+     * Unlike target review comment. 
+     * @param {Number} reviewId A valid Review ID.
+     * @param {Number} commentId A valid Comment ID.
+     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Review}
+     */
+    reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdlikeDelete");
+      }
+      // verify the required parameter 'commentId' is set
+      if (commentId === undefined || commentId === null) {
+        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdlikeDelete");
+      }
+
+      let pathParams = {
+        'review_id': reviewId,
+        'comment_id': commentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Review;
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/comments/{comment_id}like', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdlikePost operation.
+     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikePostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Review} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Like review comment
+     * Like target review comment. 
+     * @param {Number} reviewId A valid Review ID.
+     * @param {Number} commentId A valid Comment ID.
+     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Review}
+     */
+    reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdlikePost");
+      }
+      // verify the required parameter 'commentId' is set
+      if (commentId === undefined || commentId === null) {
+        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdlikePost");
+      }
+
+      let pathParams = {
+        'review_id': reviewId,
+        'comment_id': commentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Review;
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/comments/{comment_id}like', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewsReviewIdLikeDelete operation.
+     * @callback module:api/LikesApi~reviewsReviewIdLikeDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Review} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Unlike review
+     * Unlike target review. 
+     * @param {Number} reviewId A valid Review ID.
+     * @param {module:api/LikesApi~reviewsReviewIdLikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Review}
+     */
+    reviewsReviewIdLikeDelete(reviewId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdLikeDelete");
+      }
+
+      let pathParams = {
+        'review_id': reviewId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Review;
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/like', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewsReviewIdLikePost operation.
+     * @callback module:api/LikesApi~reviewsReviewIdLikePostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Review} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Like review
+     * Like target review. 
+     * @param {Number} reviewId A valid Review ID.
+     * @param {module:api/LikesApi~reviewsReviewIdLikePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Review}
+     */
+    reviewsReviewIdLikePost(reviewId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdLikePost");
+      }
+
+      let pathParams = {
+        'review_id': reviewId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Review;
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/like', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

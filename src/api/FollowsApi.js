@@ -44,7 +44,7 @@ export default class FollowsApi {
 
     /**
      * Unfollow map
-     * Unfollow taret map. 
+     * Unfollow target map. 
      * @param {Number} mapId A valid Map ID.
      * @param {module:api/FollowsApi~mapsMapIdFollowDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MapDetail}
