@@ -206,7 +206,7 @@ paths:
           description: Invalid parameter specified.
         401:
           description: Authentication has failed.
-  /users/devices:
+  /devices:
     post:
       tags:
         - Devices
@@ -229,7 +229,7 @@ paths:
           description: Invalid parameter specified.
         401:
           description: Authentication has failed.
-  /users/devices/{registration_token}:
+  /devices/{registration_token}:
     delete:
       tags:
         - Devices
