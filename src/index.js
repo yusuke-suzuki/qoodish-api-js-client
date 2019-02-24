@@ -13,16 +13,35 @@
 
 
 import ApiClient from './ApiClient';
+import Author from './model/Author';
+import Collaborator from './model/Collaborator';
+import Comment from './model/Comment';
 import CurrentUser from './model/CurrentUser';
+import InappropreateContent from './model/InappropreateContent';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
+import InlineObject2 from './model/InlineObject2';
 import MapDetail from './model/MapDetail';
 import MapDetailBase from './model/MapDetailBase';
 import NewMap from './model/NewMap';
+import NewReview from './model/NewReview';
 import NewUser from './model/NewUser';
+import Place from './model/Place';
+import Review from './model/Review';
+import ReviewImage from './model/ReviewImage';
+import ReviewMap from './model/ReviewMap';
+import Spot from './model/Spot';
+import CollaboratorsApi from './api/CollaboratorsApi';
+import CommentsApi from './api/CommentsApi';
 import DevicesApi from './api/DevicesApi';
+import FollowsApi from './api/FollowsApi';
+import IssueContentsApi from './api/IssueContentsApi';
+import LikesApi from './api/LikesApi';
 import MapsApi from './api/MapsApi';
+import PlacesApi from './api/PlacesApi';
 import PushNotificationApi from './api/PushNotificationApi';
+import ReviewsApi from './api/ReviewsApi';
+import SpotsApi from './api/SpotsApi';
 import UserMapsApi from './api/UserMapsApi';
 import UsersApi from './api/UsersApi';
 
@@ -66,10 +85,34 @@ export {
     ApiClient,
 
     /**
+     * The Author model constructor.
+     * @property {module:model/Author}
+     */
+    Author,
+
+    /**
+     * The Collaborator model constructor.
+     * @property {module:model/Collaborator}
+     */
+    Collaborator,
+
+    /**
+     * The Comment model constructor.
+     * @property {module:model/Comment}
+     */
+    Comment,
+
+    /**
      * The CurrentUser model constructor.
      * @property {module:model/CurrentUser}
      */
     CurrentUser,
+
+    /**
+     * The InappropreateContent model constructor.
+     * @property {module:model/InappropreateContent}
+     */
+    InappropreateContent,
 
     /**
      * The InlineObject model constructor.
@@ -82,6 +125,12 @@ export {
      * @property {module:model/InlineObject1}
      */
     InlineObject1,
+
+    /**
+     * The InlineObject2 model constructor.
+     * @property {module:model/InlineObject2}
+     */
+    InlineObject2,
 
     /**
      * The MapDetail model constructor.
@@ -102,10 +151,58 @@ export {
     NewMap,
 
     /**
+     * The NewReview model constructor.
+     * @property {module:model/NewReview}
+     */
+    NewReview,
+
+    /**
      * The NewUser model constructor.
      * @property {module:model/NewUser}
      */
     NewUser,
+
+    /**
+     * The Place model constructor.
+     * @property {module:model/Place}
+     */
+    Place,
+
+    /**
+     * The Review model constructor.
+     * @property {module:model/Review}
+     */
+    Review,
+
+    /**
+     * The ReviewImage model constructor.
+     * @property {module:model/ReviewImage}
+     */
+    ReviewImage,
+
+    /**
+     * The ReviewMap model constructor.
+     * @property {module:model/ReviewMap}
+     */
+    ReviewMap,
+
+    /**
+     * The Spot model constructor.
+     * @property {module:model/Spot}
+     */
+    Spot,
+
+    /**
+    * The CollaboratorsApi service constructor.
+    * @property {module:api/CollaboratorsApi}
+    */
+    CollaboratorsApi,
+
+    /**
+    * The CommentsApi service constructor.
+    * @property {module:api/CommentsApi}
+    */
+    CommentsApi,
 
     /**
     * The DevicesApi service constructor.
@@ -114,16 +211,52 @@ export {
     DevicesApi,
 
     /**
+    * The FollowsApi service constructor.
+    * @property {module:api/FollowsApi}
+    */
+    FollowsApi,
+
+    /**
+    * The IssueContentsApi service constructor.
+    * @property {module:api/IssueContentsApi}
+    */
+    IssueContentsApi,
+
+    /**
+    * The LikesApi service constructor.
+    * @property {module:api/LikesApi}
+    */
+    LikesApi,
+
+    /**
     * The MapsApi service constructor.
     * @property {module:api/MapsApi}
     */
     MapsApi,
 
     /**
+    * The PlacesApi service constructor.
+    * @property {module:api/PlacesApi}
+    */
+    PlacesApi,
+
+    /**
     * The PushNotificationApi service constructor.
     * @property {module:api/PushNotificationApi}
     */
     PushNotificationApi,
+
+    /**
+    * The ReviewsApi service constructor.
+    * @property {module:api/ReviewsApi}
+    */
+    ReviewsApi,
+
+    /**
+    * The SpotsApi service constructor.
+    * @property {module:api/SpotsApi}
+    */
+    SpotsApi,
 
     /**
     * The UserMapsApi service constructor.

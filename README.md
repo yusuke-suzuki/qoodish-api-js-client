@@ -77,16 +77,16 @@ firebaseAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new QoodishApi.DevicesApi()
-var inlineObject1 = new QoodishApi.InlineObject1(); // {InlineObject1} 
+var api = new QoodishApi.CollaboratorsApi()
+var mapId = 1; // {Number} A valid Map ID.
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.usersDevicesPost(inlineObject1, callback);
+api.mapsMapIdCollaboratorsGet(mapId, callback);
 
 ```
 
@@ -96,15 +96,39 @@ All URIs are relative to *https://api.qoodish.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*QoodishApi.DevicesApi* | [**usersDevicesPost**](docs/DevicesApi.md#usersDevicesPost) | **POST** /users/devices | Register device
-*QoodishApi.DevicesApi* | [**usersDevicesRegistrationTokenDelete**](docs/DevicesApi.md#usersDevicesRegistrationTokenDelete) | **DELETE** /users/devices/{registration_token} | Delete device
+*QoodishApi.CollaboratorsApi* | [**mapsMapIdCollaboratorsGet**](docs/CollaboratorsApi.md#mapsMapIdCollaboratorsGet) | **GET** /maps/{map_id}/collaborators | Fetch collaborators
+*QoodishApi.CommentsApi* | [**reviewsReviewIdCommentsCommentIdDelete**](docs/CommentsApi.md#reviewsReviewIdCommentsCommentIdDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id} | Delete review comment
+*QoodishApi.CommentsApi* | [**reviewsReviewIdCommentsPost**](docs/CommentsApi.md#reviewsReviewIdCommentsPost) | **POST** /reviews/{review_id}/comments | Send review comment
+*QoodishApi.DevicesApi* | [**devicesPost**](docs/DevicesApi.md#devicesPost) | **POST** /devices | Register device
+*QoodishApi.DevicesApi* | [**devicesRegistrationTokenDelete**](docs/DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
+*QoodishApi.FollowsApi* | [**mapsMapIdFollowDelete**](docs/FollowsApi.md#mapsMapIdFollowDelete) | **DELETE** /maps/{map_id}/follow | Unfollow map
+*QoodishApi.FollowsApi* | [**mapsMapIdFollowPost**](docs/FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
+*QoodishApi.IssueContentsApi* | [**inappropriateContentsPost**](docs/IssueContentsApi.md#inappropriateContentsPost) | **POST** /inappropriate_contents | Issue inappropriate content
+*QoodishApi.LikesApi* | [**mapsMapIdLikeDelete**](docs/LikesApi.md#mapsMapIdLikeDelete) | **DELETE** /maps/{map_id}/like | Unlike map
+*QoodishApi.LikesApi* | [**mapsMapIdLikePost**](docs/LikesApi.md#mapsMapIdLikePost) | **POST** /maps/{map_id}/like | Like map
+*QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdlikeDelete**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdlikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}like | Unlike review comment
+*QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdlikePost**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdlikePost) | **POST** /reviews/{review_id}/comments/{comment_id}like | Like review comment
+*QoodishApi.LikesApi* | [**reviewsReviewIdLikeDelete**](docs/LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
+*QoodishApi.LikesApi* | [**reviewsReviewIdLikePost**](docs/LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
 *QoodishApi.MapsApi* | [**mapsGet**](docs/MapsApi.md#mapsGet) | **GET** /maps | List Maps
 *QoodishApi.MapsApi* | [**mapsMapIdDelete**](docs/MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
 *QoodishApi.MapsApi* | [**mapsMapIdPut**](docs/MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
 *QoodishApi.MapsApi* | [**mapsPost**](docs/MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+*QoodishApi.PlacesApi* | [**placesGet**](docs/PlacesApi.md#placesGet) | **GET** /places | Fetch places
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationDelete**](docs/PushNotificationApi.md#usersUserIdPushNotificationDelete) | **DELETE** /users/{user_id}/push_notification | Disable push notification
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPost**](docs/PushNotificationApi.md#usersUserIdPushNotificationPost) | **POST** /users/{user_id}/push_notification | Enable push notification
+*QoodishApi.ReviewsApi* | [**mapsMapIdReviewsGet**](docs/ReviewsApi.md#mapsMapIdReviewsGet) | **GET** /maps/{map_id}/reviews | Fetch map reviews
+*QoodishApi.ReviewsApi* | [**mapsMapIdReviewsPost**](docs/ReviewsApi.md#mapsMapIdReviewsPost) | **POST** /maps/{map_id}/reviews | Create review
+*QoodishApi.ReviewsApi* | [**mapsMapIdReviewsReviewIdGet**](docs/ReviewsApi.md#mapsMapIdReviewsReviewIdGet) | **GET** /maps/{map_id}/reviews/{review_id} | Fetch review
+*QoodishApi.ReviewsApi* | [**reviewsGet**](docs/ReviewsApi.md#reviewsGet) | **GET** /reviews | Fetch reviews
+*QoodishApi.ReviewsApi* | [**reviewsReviewIdDelete**](docs/ReviewsApi.md#reviewsReviewIdDelete) | **DELETE** /reviews/{review_id} | Delete review
+*QoodishApi.ReviewsApi* | [**reviewsReviewIdPut**](docs/ReviewsApi.md#reviewsReviewIdPut) | **PUT** /reviews/{review_id} | Update review
+*QoodishApi.ReviewsApi* | [**spotsPlaceIdReviewsGet**](docs/ReviewsApi.md#spotsPlaceIdReviewsGet) | **GET** /spots/{place_id}/reviews | Fetch spot reviews
+*QoodishApi.ReviewsApi* | [**usersUserIdReviewsGet**](docs/ReviewsApi.md#usersUserIdReviewsGet) | **GET** /users/{user_id}/reviews | Fetch user reviews
+*QoodishApi.SpotsApi* | [**mapsMapIdSpotsGet**](docs/SpotsApi.md#mapsMapIdSpotsGet) | **GET** /maps/{map_id}/spots | Fetch spots on map
+*QoodishApi.SpotsApi* | [**spotsGet**](docs/SpotsApi.md#spotsGet) | **GET** /spots | Fetch spots
+*QoodishApi.SpotsApi* | [**spotsPlaceIdGet**](docs/SpotsApi.md#spotsPlaceIdGet) | **GET** /spots/{place_id} | Fetch a spot
 *QoodishApi.UserMapsApi* | [**usersUserIdMapsGet**](docs/UserMapsApi.md#usersUserIdMapsGet) | **GET** /users/{user_id}/maps | Fetch user Maps
 *QoodishApi.UsersApi* | [**usersGet**](docs/UsersApi.md#usersGet) | **GET** /users | Search users
 *QoodishApi.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Sign in
@@ -115,13 +139,24 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [QoodishApi.Author](docs/Author.md)
+ - [QoodishApi.Collaborator](docs/Collaborator.md)
+ - [QoodishApi.Comment](docs/Comment.md)
  - [QoodishApi.CurrentUser](docs/CurrentUser.md)
+ - [QoodishApi.InappropreateContent](docs/InappropreateContent.md)
  - [QoodishApi.InlineObject](docs/InlineObject.md)
  - [QoodishApi.InlineObject1](docs/InlineObject1.md)
+ - [QoodishApi.InlineObject2](docs/InlineObject2.md)
  - [QoodishApi.MapDetail](docs/MapDetail.md)
  - [QoodishApi.MapDetailBase](docs/MapDetailBase.md)
  - [QoodishApi.NewMap](docs/NewMap.md)
+ - [QoodishApi.NewReview](docs/NewReview.md)
  - [QoodishApi.NewUser](docs/NewUser.md)
+ - [QoodishApi.Place](docs/Place.md)
+ - [QoodishApi.Review](docs/Review.md)
+ - [QoodishApi.ReviewImage](docs/ReviewImage.md)
+ - [QoodishApi.ReviewMap](docs/ReviewMap.md)
+ - [QoodishApi.Spot](docs/Spot.md)
 
 
 ## Documentation for Authorization
