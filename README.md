@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.usersDevicesPost(inlineObject1, callback);
+api.devicesPost(inlineObject1, callback);
 
 ```
 
@@ -96,8 +96,8 @@ All URIs are relative to *https://api.qoodish.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*QoodishApi.DevicesApi* | [**usersDevicesPost**](docs/DevicesApi.md#usersDevicesPost) | **POST** /users/devices | Register device
-*QoodishApi.DevicesApi* | [**usersDevicesRegistrationTokenDelete**](docs/DevicesApi.md#usersDevicesRegistrationTokenDelete) | **DELETE** /users/devices/{registration_token} | Delete device
+*QoodishApi.DevicesApi* | [**devicesPost**](docs/DevicesApi.md#devicesPost) | **POST** /devices | Register device
+*QoodishApi.DevicesApi* | [**devicesRegistrationTokenDelete**](docs/DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
 *QoodishApi.MapsApi* | [**mapsGet**](docs/MapsApi.md#mapsGet) | **GET** /maps | List Maps
 *QoodishApi.MapsApi* | [**mapsMapIdDelete**](docs/MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail

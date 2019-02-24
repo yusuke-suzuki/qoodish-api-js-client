@@ -4,13 +4,13 @@ All URIs are relative to *https://api.qoodish.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**usersDevicesPost**](DevicesApi.md#usersDevicesPost) | **POST** /users/devices | Register device
-[**usersDevicesRegistrationTokenDelete**](DevicesApi.md#usersDevicesRegistrationTokenDelete) | **DELETE** /users/devices/{registration_token} | Delete device
+[**devicesPost**](DevicesApi.md#devicesPost) | **POST** /devices | Register device
+[**devicesRegistrationTokenDelete**](DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
 
 
-<a name="usersDevicesPost"></a>
-# **usersDevicesPost**
-> usersDevicesPost(inlineObject1)
+<a name="devicesPost"></a>
+# **devicesPost**
+> devicesPost(inlineObject1)
 
 Register device
 
@@ -28,7 +28,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new QoodishApi.DevicesApi();
 let inlineObject1 = new QoodishApi.InlineObject1(); // InlineObject1 | 
-apiInstance.usersDevicesPost(inlineObject1, (error, data, response) => {
+apiInstance.devicesPost(inlineObject1, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -56,9 +56,9 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="usersDevicesRegistrationTokenDelete"></a>
-# **usersDevicesRegistrationTokenDelete**
-> usersDevicesRegistrationTokenDelete(registrationToken)
+<a name="devicesRegistrationTokenDelete"></a>
+# **devicesRegistrationTokenDelete**
+> devicesRegistrationTokenDelete(registrationToken)
 
 Delete device
 
@@ -76,7 +76,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new QoodishApi.DevicesApi();
 let registrationToken = 12345abcdef; // String | A valid registration token.
-apiInstance.usersDevicesRegistrationTokenDelete(registrationToken, (error, data, response) => {
+apiInstance.devicesRegistrationTokenDelete(registrationToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

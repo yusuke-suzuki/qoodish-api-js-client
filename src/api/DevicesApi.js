@@ -35,8 +35,8 @@ export default class DevicesApi {
 
 
     /**
-     * Callback function to receive the result of the usersDevicesPost operation.
-     * @callback module:api/DevicesApi~usersDevicesPostCallback
+     * Callback function to receive the result of the devicesPost operation.
+     * @callback module:api/DevicesApi~devicesPostCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -46,13 +46,13 @@ export default class DevicesApi {
      * Register device
      * Register device with registration token.
      * @param {module:model/InlineObject1} inlineObject1 
-     * @param {module:api/DevicesApi~usersDevicesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DevicesApi~devicesPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    usersDevicesPost(inlineObject1, callback) {
+    devicesPost(inlineObject1, callback) {
       let postBody = inlineObject1;
       // verify the required parameter 'inlineObject1' is set
       if (inlineObject1 === undefined || inlineObject1 === null) {
-        throw new Error("Missing the required parameter 'inlineObject1' when calling usersDevicesPost");
+        throw new Error("Missing the required parameter 'inlineObject1' when calling devicesPost");
       }
 
       let pathParams = {
@@ -69,15 +69,15 @@ export default class DevicesApi {
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/users/devices', 'POST',
+        '/devices', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the usersDevicesRegistrationTokenDelete operation.
-     * @callback module:api/DevicesApi~usersDevicesRegistrationTokenDeleteCallback
+     * Callback function to receive the result of the devicesRegistrationTokenDelete operation.
+     * @callback module:api/DevicesApi~devicesRegistrationTokenDeleteCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -87,13 +87,13 @@ export default class DevicesApi {
      * Delete device
      * Delete device with registration token.
      * @param {String} registrationToken A valid registration token.
-     * @param {module:api/DevicesApi~usersDevicesRegistrationTokenDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DevicesApi~devicesRegistrationTokenDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    usersDevicesRegistrationTokenDelete(registrationToken, callback) {
+    devicesRegistrationTokenDelete(registrationToken, callback) {
       let postBody = null;
       // verify the required parameter 'registrationToken' is set
       if (registrationToken === undefined || registrationToken === null) {
-        throw new Error("Missing the required parameter 'registrationToken' when calling usersDevicesRegistrationTokenDelete");
+        throw new Error("Missing the required parameter 'registrationToken' when calling devicesRegistrationTokenDelete");
       }
 
       let pathParams = {
@@ -111,7 +111,7 @@ export default class DevicesApi {
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/users/devices/{registration_token}', 'DELETE',
+        '/devices/{registration_token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
