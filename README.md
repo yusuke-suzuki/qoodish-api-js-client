@@ -77,16 +77,16 @@ firebaseAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new QoodishApi.DevicesApi()
-var inlineObject1 = new QoodishApi.InlineObject1(); // {InlineObject1} 
+var api = new QoodishApi.CollaboratorsApi()
+var mapId = 1; // {Number} A valid Map ID.
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.devicesPost(inlineObject1, callback);
+api.mapsMapIdCollaboratorsGet(mapId, callback);
 
 ```
 
@@ -96,15 +96,25 @@ All URIs are relative to *https://api.qoodish.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*QoodishApi.CollaboratorsApi* | [**mapsMapIdCollaboratorsGet**](docs/CollaboratorsApi.md#mapsMapIdCollaboratorsGet) | **GET** /maps/{map_id}/collaborators | Fetch collaborators
 *QoodishApi.DevicesApi* | [**devicesPost**](docs/DevicesApi.md#devicesPost) | **POST** /devices | Register device
 *QoodishApi.DevicesApi* | [**devicesRegistrationTokenDelete**](docs/DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
+*QoodishApi.FollowsApi* | [**mapsMapIdFollowDelete**](docs/FollowsApi.md#mapsMapIdFollowDelete) | **DELETE** /maps/{map_id}/follow | Unfollow map
+*QoodishApi.FollowsApi* | [**mapsMapIdFollowPost**](docs/FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
+*QoodishApi.IssueContentsApi* | [**inappropriateContentsPost**](docs/IssueContentsApi.md#inappropriateContentsPost) | **POST** /inappropriate_contents | Issue inappropriate content
+*QoodishApi.LikesApi* | [**mapsMapIdLikeDelete**](docs/LikesApi.md#mapsMapIdLikeDelete) | **DELETE** /maps/{map_id}/like | Unlike map
+*QoodishApi.LikesApi* | [**mapsMapIdLikePost**](docs/LikesApi.md#mapsMapIdLikePost) | **POST** /maps/{map_id}/like | Like map
 *QoodishApi.MapsApi* | [**mapsGet**](docs/MapsApi.md#mapsGet) | **GET** /maps | List Maps
 *QoodishApi.MapsApi* | [**mapsMapIdDelete**](docs/MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
 *QoodishApi.MapsApi* | [**mapsMapIdPut**](docs/MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
 *QoodishApi.MapsApi* | [**mapsPost**](docs/MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+*QoodishApi.PlacesApi* | [**placesGet**](docs/PlacesApi.md#placesGet) | **GET** /places | Fetch places
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationDelete**](docs/PushNotificationApi.md#usersUserIdPushNotificationDelete) | **DELETE** /users/{user_id}/push_notification | Disable push notification
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPost**](docs/PushNotificationApi.md#usersUserIdPushNotificationPost) | **POST** /users/{user_id}/push_notification | Enable push notification
+*QoodishApi.SpotsApi* | [**mapsMapIdSpotsGet**](docs/SpotsApi.md#mapsMapIdSpotsGet) | **GET** /maps/{map_id}/spots | Fetch spots on map
+*QoodishApi.SpotsApi* | [**spotsGet**](docs/SpotsApi.md#spotsGet) | **GET** /spots | Fetch spots
+*QoodishApi.SpotsApi* | [**spotsPlaceIdGet**](docs/SpotsApi.md#spotsPlaceIdGet) | **GET** /spots/{place_id} | Fetch a spot
 *QoodishApi.UserMapsApi* | [**usersUserIdMapsGet**](docs/UserMapsApi.md#usersUserIdMapsGet) | **GET** /users/{user_id}/maps | Fetch user Maps
 *QoodishApi.UsersApi* | [**usersGet**](docs/UsersApi.md#usersGet) | **GET** /users | Search users
 *QoodishApi.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Sign in
@@ -115,13 +125,17 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [QoodishApi.Collaborator](docs/Collaborator.md)
  - [QoodishApi.CurrentUser](docs/CurrentUser.md)
+ - [QoodishApi.InappropreateContent](docs/InappropreateContent.md)
  - [QoodishApi.InlineObject](docs/InlineObject.md)
  - [QoodishApi.InlineObject1](docs/InlineObject1.md)
  - [QoodishApi.MapDetail](docs/MapDetail.md)
  - [QoodishApi.MapDetailBase](docs/MapDetailBase.md)
  - [QoodishApi.NewMap](docs/NewMap.md)
  - [QoodishApi.NewUser](docs/NewUser.md)
+ - [QoodishApi.Place](docs/Place.md)
+ - [QoodishApi.Spot](docs/Spot.md)
 
 
 ## Documentation for Authorization
