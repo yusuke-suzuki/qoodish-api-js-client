@@ -27,7 +27,10 @@ tags:
     description: Manage collaborators
   - name: Issue Contents
     description: Issue inappropriate contents
-
+  - name: Reviews
+    description: Manage reviews
+  - name: Comments
+    description: Manage comments
 servers:
   - url: https://api.qoodish.com
 security:
@@ -598,7 +601,7 @@ paths:
         - Likes
       summary: Like map
       description: |
-        Like taret map.
+        Like target map.
       parameters:
         - name: map_id
           in: path
@@ -623,7 +626,7 @@ paths:
         - Likes
       summary: Unlike map
       description: |
-        Unlike taret map.
+        Unlike target map.
       parameters:
         - name: map_id
           in: path
@@ -680,7 +683,7 @@ paths:
         - Follows
       summary: Unfollow map
       description: |
-        Unfollow taret map.
+        Unfollow target map.
       parameters:
         - name: map_id
           in: path
@@ -716,10 +719,429 @@ paths:
       responses:
         204:
           description: Request was successful.
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch map reviews
+      description: |
+        Fetch reviews on map.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+    post:
+      tags:
+        - Reviews
+      summary: Create review
+      description: |
+        Create a new review.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewReview"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}/reviews/{review_id}:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch review
+      description: |
+        Fetch a review.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch reviews
+      description: |
+        Fetch reviews.
+      parameters:
+        - name: next_timestamp
+          in: query
+          schema:
+            type: string
+          description: Filter with timestamp.
+          example: "2019-02-19T08:19:32.000Z"
+        - name: recent
+          in: query
+          schema:
+            type: boolean
+          description: Filter recent reviews with this option.
+          example: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+  /users/{user_id}/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch user reviews
+      description: |
+        Fetch user reviews.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+        - name: next_timestamp
+          in: query
+          schema:
+            type: string
+          description: Filter with timestamp.
+          example: "2019-02-19T08:19:32.000Z"
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+  /spots/{place_id}/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch spot reviews
+      description: |
+        Fetch spot reviews.
+      parameters:
+        - name: place_id
+          in: path
+          required: true
+          description: A valid Place ID.
+          example: 1
+          schema:
+            type: string
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+  /reviews/{review_id}:
+    put:
+      tags:
+        - Reviews
+      summary: Update review
+      description: |
+        Update a review.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewReview"
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
         401:
           description: Authentication has failed.
         400:
           description: Invalid parameter specified.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Reviews
+      summary: Delete review
+      description: |
+        Delete a review.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Request was successful.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /reviews/{review_id}/like:
+    post:
+      tags:
+        - Likes
+      summary: Like review
+      description: |
+        Like target review.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Likes
+      summary: Unlike review
+      description: |
+        Unlike target review.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /reviews/{review_id}/comments:
+    post:
+      tags:
+        - comments
+      summary: Send review comment
+      description: |
+        Send review comment.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  example: This is comment body.
+        required: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /reviews/{review_id}/comments/{comment_id}:
+    delete:
+      tags:
+        - comments
+      summary: Delete review comment
+      description: |
+        Delete review comment.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+        - name: comment_id
+          in: path
+          required: true
+          description: A valid Comment ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /reviews/{review_id}/comments/{comment_id}like:
+    post:
+      tags:
+        - Likes
+      summary: Like review comment
+      description: |
+        Like target review comment.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+        - name: comment_id
+          in: path
+          required: true
+          description: A valid Comment ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+    delete:
+      tags:
+        - Likes
+      summary: Unlike review comment
+      description: |
+        Unlike target review comment.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+        - name: comment_id
+          in: path
+          required: true
+          description: A valid Comment ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
 components:
   securitySchemes:
     firebaseAuth:
@@ -968,3 +1390,116 @@ components:
         reason_id:
           type: integer
           example: 1
+    Author:
+      type: object
+      description: Resource author object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: authorname
+        profile_image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+    Comment:
+      type: object
+      description: Review comment object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        review_id:
+          type: integer
+          example: 1
+        author:
+          $ref: "#/components/schemas/Author"
+        body:
+          type: string
+          example: This is comment body.
+        editable:
+          type: boolean
+          example: true
+        liked:
+          type: boolean
+          example: true
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+    ReviewImage:
+      type: object
+      description: Review image object.
+      properties:
+        url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        file_name:
+          type: string
+          example: substitute.png
+        thumbnail_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+    Review:
+      type: object
+      description: User created Review object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        place_id:
+          type: string
+          example: ChIJl4BYvuq3t4kRfUzigrEUfUo
+        author:
+          $ref: "#/components/schemas/Author"
+        comment:
+          type: string
+          example: This is comment.
+        comments:
+          type: array
+          items:
+            $ref: "#/components/schemas/Comment"
+        image:
+          $ref: "#/components/schemas/ReviewImage"
+        spot:
+          $ref: "#/components/schemas/Spot"
+        map:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1
+            name:
+              type: string
+              example: My map
+            private:
+              type: boolean
+              example: false
+        editable:
+          type: boolean
+          example: true
+        liked:
+          type: boolean
+          example: true
+        likes_count:
+          type: integer
+          example: 2
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+    NewReview:
+      type: object
+      description: New Review object.
+      properties:
+        comment:
+          type: string
+          example: This is comment.
+        place_id:
+          type: string
+          example: ChIJl4BYvuq3t4kRfUzigrEUfUo
+        image_url:
+          type: string
+          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
