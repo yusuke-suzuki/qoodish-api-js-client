@@ -31,6 +31,10 @@ tags:
     description: Manage reviews
   - name: Comments
     description: Manage comments
+  - name: Notifications
+    description: Manage notifications
+  - name: Invites
+    description: Manage invites
 servers:
   - url: https://api.qoodish.com
 security:
@@ -1011,7 +1015,7 @@ paths:
   /reviews/{review_id}/comments:
     post:
       tags:
-        - comments
+        - Comments
       summary: Send review comment
       description: |
         Send review comment.
@@ -1047,7 +1051,7 @@ paths:
   /reviews/{review_id}/comments/{comment_id}:
     delete:
       tags:
-        - comments
+        - Comments
       summary: Delete review comment
       description: |
         Delete review comment.
@@ -1142,6 +1146,185 @@ paths:
           description: Authentication has failed.
         404:
           description: Resource not found.
+  /notifications:
+    get:
+      tags:
+        - Notifications
+      summary: Fetch notifications
+      description: Fetch recent notifications.
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notification"
+        401:
+          description: Authentication has failed.
+  /notifications/{notification_id}:
+    put:
+      tags:
+        - Notifications
+      summary: Update notification
+      description: Update notification.
+      parameters:
+        - name: notification_id
+          in: path
+          required: true
+          description: A valid Notification ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                read:
+                  type: boolean
+                  example: true
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Notification"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /invites:
+    get:
+      tags:
+        - Invites
+      summary: Fetch invites
+      description: Fetch invites for Map.
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Invite"
+        401:
+          description: Authentication has failed.
+  /maps/{map_id}/invites:
+    post:
+      tags:
+        - Invites
+      summary: Send invite
+      description: Send invites for Map to User.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewInvite"
+        required: true
+      responses:
+        204:
+          description: Request was successful.
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /maps/{map_id}/likes:
+    get:
+      tags:
+        - Likes
+      summary: Fetch map likes
+      description: Fetch likes on Map
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Like"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /reviews/{review_id}/likes:
+    get:
+      tags:
+        - Likes
+      summary: Fetch review likes
+      description: Fetch likes on Review
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Like"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+  /users/{user_id}/likes:
+    get:
+      tags:
+        - Likes
+      summary: Fetch user likes
+      description: Fetch likes by User
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: A valid User ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Like"
+        400:
+          description: Invalid parameter specified.
+        401:
+          description: Authentication has failed.
+
 components:
   securitySchemes:
     firebaseAuth:
@@ -1503,3 +1686,97 @@ components:
         image_url:
           type: string
           example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+    Notification:
+      type: object
+      description: Notification object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        key:
+          type: string
+          example: liked
+        click_action:
+          type: string
+          example: https://qoodish.com/maps/1/reviews/1
+        notifiable:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1
+            type:
+              type: string
+              example: Review
+            thumbnail_url:
+              type: string
+              example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        notifier:
+          $ref: "#/components/schemas/Author"
+        read:
+          type: boolean
+          example: false
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+    NewInvite:
+      type: object
+      description: New Invite object.
+      properties:
+        user_id:
+          type: integer
+          example: 1
+    Invite:
+      type: object
+      description: Invite object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        invitable:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1
+            type:
+              type: string
+              example: Review
+            image_url:
+              type: string
+              example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+            name:
+              type: string
+              example: My map
+            description:
+              type: string
+              example: This is description.
+        sender:
+          $ref: "#/components/schemas/Author"
+        expired:
+          type: boolean
+          example: false
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+    Like:
+      type: object
+      description: Like object.
+      properties:
+        id:
+          type: integer
+          example: 1
+        voter:
+          $ref: "#/components/schemas/Author"
+        created_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
+        updated_at:
+          type: string
+          example: "2019-02-19T08:19:32.000Z"
