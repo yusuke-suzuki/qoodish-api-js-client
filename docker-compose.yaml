@@ -12,3 +12,11 @@ services:
       - javascript
       - -o
       - /local
+  validator:
+    image: openapitools/openapi-generator-cli
+    volumes:
+      - .:/local
+    command:
+      - validate
+      - -i
+      - /local/openapi.yaml
