@@ -1,11 +1,11 @@
-openapi: 3.0.0
+openapi: 3.0.0hogehoge
 info:
-  title: Qoodish API
-  description: |
+  title: Qoodish APIh
+  bbdescription: |
     Qoodih API.
-  version: 0.0.1
+      version: 0.0.1
 tags:
-  - name: Users
+        - name: Users
     description: Manage user resources.
   - name: Push Notification
     description: Enable/disable push notification.
