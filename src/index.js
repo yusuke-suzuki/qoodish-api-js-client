@@ -21,11 +21,18 @@ import InappropreateContent from './model/InappropreateContent';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
 import InlineObject2 from './model/InlineObject2';
+import InlineObject3 from './model/InlineObject3';
+import Invite from './model/Invite';
+import InviteInvitable from './model/InviteInvitable';
+import Like from './model/Like';
 import MapDetail from './model/MapDetail';
 import MapDetailBase from './model/MapDetailBase';
+import NewInvite from './model/NewInvite';
 import NewMap from './model/NewMap';
 import NewReview from './model/NewReview';
 import NewUser from './model/NewUser';
+import Notification from './model/Notification';
+import NotificationNotifiable from './model/NotificationNotifiable';
 import Place from './model/Place';
 import Review from './model/Review';
 import ReviewImage from './model/ReviewImage';
@@ -35,9 +42,11 @@ import CollaboratorsApi from './api/CollaboratorsApi';
 import CommentsApi from './api/CommentsApi';
 import DevicesApi from './api/DevicesApi';
 import FollowsApi from './api/FollowsApi';
+import InvitesApi from './api/InvitesApi';
 import IssueContentsApi from './api/IssueContentsApi';
 import LikesApi from './api/LikesApi';
 import MapsApi from './api/MapsApi';
+import NotificationsApi from './api/NotificationsApi';
 import PlacesApi from './api/PlacesApi';
 import PushNotificationApi from './api/PushNotificationApi';
 import ReviewsApi from './api/ReviewsApi';
@@ -133,6 +142,30 @@ export {
     InlineObject2,
 
     /**
+     * The InlineObject3 model constructor.
+     * @property {module:model/InlineObject3}
+     */
+    InlineObject3,
+
+    /**
+     * The Invite model constructor.
+     * @property {module:model/Invite}
+     */
+    Invite,
+
+    /**
+     * The InviteInvitable model constructor.
+     * @property {module:model/InviteInvitable}
+     */
+    InviteInvitable,
+
+    /**
+     * The Like model constructor.
+     * @property {module:model/Like}
+     */
+    Like,
+
+    /**
      * The MapDetail model constructor.
      * @property {module:model/MapDetail}
      */
@@ -143,6 +176,12 @@ export {
      * @property {module:model/MapDetailBase}
      */
     MapDetailBase,
+
+    /**
+     * The NewInvite model constructor.
+     * @property {module:model/NewInvite}
+     */
+    NewInvite,
 
     /**
      * The NewMap model constructor.
@@ -161,6 +200,18 @@ export {
      * @property {module:model/NewUser}
      */
     NewUser,
+
+    /**
+     * The Notification model constructor.
+     * @property {module:model/Notification}
+     */
+    Notification,
+
+    /**
+     * The NotificationNotifiable model constructor.
+     * @property {module:model/NotificationNotifiable}
+     */
+    NotificationNotifiable,
 
     /**
      * The Place model constructor.
@@ -217,6 +268,12 @@ export {
     FollowsApi,
 
     /**
+    * The InvitesApi service constructor.
+    * @property {module:api/InvitesApi}
+    */
+    InvitesApi,
+
+    /**
     * The IssueContentsApi service constructor.
     * @property {module:api/IssueContentsApi}
     */
@@ -233,6 +290,12 @@ export {
     * @property {module:api/MapsApi}
     */
     MapsApi,
+
+    /**
+    * The NotificationsApi service constructor.
+    * @property {module:api/NotificationsApi}
+    */
+    NotificationsApi,
 
     /**
     * The PlacesApi service constructor.

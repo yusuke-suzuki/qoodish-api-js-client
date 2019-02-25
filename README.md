@@ -103,18 +103,25 @@ Class | Method | HTTP request | Description
 *QoodishApi.DevicesApi* | [**devicesRegistrationTokenDelete**](docs/DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
 *QoodishApi.FollowsApi* | [**mapsMapIdFollowDelete**](docs/FollowsApi.md#mapsMapIdFollowDelete) | **DELETE** /maps/{map_id}/follow | Unfollow map
 *QoodishApi.FollowsApi* | [**mapsMapIdFollowPost**](docs/FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
+*QoodishApi.InvitesApi* | [**invitesGet**](docs/InvitesApi.md#invitesGet) | **GET** /invites | Fetch invites
+*QoodishApi.InvitesApi* | [**mapsMapIdInvitesPost**](docs/InvitesApi.md#mapsMapIdInvitesPost) | **POST** /maps/{map_id}/invites | Send invite
 *QoodishApi.IssueContentsApi* | [**inappropriateContentsPost**](docs/IssueContentsApi.md#inappropriateContentsPost) | **POST** /inappropriate_contents | Issue inappropriate content
 *QoodishApi.LikesApi* | [**mapsMapIdLikeDelete**](docs/LikesApi.md#mapsMapIdLikeDelete) | **DELETE** /maps/{map_id}/like | Unlike map
 *QoodishApi.LikesApi* | [**mapsMapIdLikePost**](docs/LikesApi.md#mapsMapIdLikePost) | **POST** /maps/{map_id}/like | Like map
+*QoodishApi.LikesApi* | [**mapsMapIdLikesGet**](docs/LikesApi.md#mapsMapIdLikesGet) | **GET** /maps/{map_id}/likes | Fetch map likes
 *QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdlikeDelete**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdlikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}like | Unlike review comment
 *QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdlikePost**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdlikePost) | **POST** /reviews/{review_id}/comments/{comment_id}like | Like review comment
 *QoodishApi.LikesApi* | [**reviewsReviewIdLikeDelete**](docs/LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
 *QoodishApi.LikesApi* | [**reviewsReviewIdLikePost**](docs/LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
+*QoodishApi.LikesApi* | [**reviewsReviewIdLikesGet**](docs/LikesApi.md#reviewsReviewIdLikesGet) | **GET** /reviews/{review_id}/likes | Fetch review likes
+*QoodishApi.LikesApi* | [**usersUserIdLikesGet**](docs/LikesApi.md#usersUserIdLikesGet) | **GET** /users/{user_id}/likes | Fetch user likes
 *QoodishApi.MapsApi* | [**mapsGet**](docs/MapsApi.md#mapsGet) | **GET** /maps | List Maps
 *QoodishApi.MapsApi* | [**mapsMapIdDelete**](docs/MapsApi.md#mapsMapIdDelete) | **DELETE** /maps/{map_id} | Delete a Map
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
 *QoodishApi.MapsApi* | [**mapsMapIdPut**](docs/MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
 *QoodishApi.MapsApi* | [**mapsPost**](docs/MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+*QoodishApi.NotificationsApi* | [**notificationsGet**](docs/NotificationsApi.md#notificationsGet) | **GET** /notifications | Fetch notifications
+*QoodishApi.NotificationsApi* | [**notificationsNotificationIdPut**](docs/NotificationsApi.md#notificationsNotificationIdPut) | **PUT** /notifications/{notification_id} | Update notification
 *QoodishApi.PlacesApi* | [**placesGet**](docs/PlacesApi.md#placesGet) | **GET** /places | Fetch places
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationDelete**](docs/PushNotificationApi.md#usersUserIdPushNotificationDelete) | **DELETE** /users/{user_id}/push_notification | Disable push notification
 *QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPost**](docs/PushNotificationApi.md#usersUserIdPushNotificationPost) | **POST** /users/{user_id}/push_notification | Enable push notification
@@ -147,11 +154,18 @@ Class | Method | HTTP request | Description
  - [QoodishApi.InlineObject](docs/InlineObject.md)
  - [QoodishApi.InlineObject1](docs/InlineObject1.md)
  - [QoodishApi.InlineObject2](docs/InlineObject2.md)
+ - [QoodishApi.InlineObject3](docs/InlineObject3.md)
+ - [QoodishApi.Invite](docs/Invite.md)
+ - [QoodishApi.InviteInvitable](docs/InviteInvitable.md)
+ - [QoodishApi.Like](docs/Like.md)
  - [QoodishApi.MapDetail](docs/MapDetail.md)
  - [QoodishApi.MapDetailBase](docs/MapDetailBase.md)
+ - [QoodishApi.NewInvite](docs/NewInvite.md)
  - [QoodishApi.NewMap](docs/NewMap.md)
  - [QoodishApi.NewReview](docs/NewReview.md)
  - [QoodishApi.NewUser](docs/NewUser.md)
+ - [QoodishApi.Notification](docs/Notification.md)
+ - [QoodishApi.NotificationNotifiable](docs/NotificationNotifiable.md)
  - [QoodishApi.Place](docs/Place.md)
  - [QoodishApi.Review](docs/Review.md)
  - [QoodishApi.ReviewImage](docs/ReviewImage.md)
