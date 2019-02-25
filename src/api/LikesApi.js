@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import Like from '../model/Like';
 import MapDetail from '../model/MapDetail';
 import Review from '../model/Review';
 
@@ -116,6 +117,49 @@ export default class LikesApi {
       let returnType = MapDetail;
       return this.apiClient.callApi(
         '/maps/{map_id}/like', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mapsMapIdLikesGet operation.
+     * @callback module:api/LikesApi~mapsMapIdLikesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Like>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch map likes
+     * Fetch likes on Map
+     * @param {Number} mapId A valid Map ID.
+     * @param {module:api/LikesApi~mapsMapIdLikesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Like>}
+     */
+    mapsMapIdLikesGet(mapId, callback) {
+      let postBody = null;
+      // verify the required parameter 'mapId' is set
+      if (mapId === undefined || mapId === null) {
+        throw new Error("Missing the required parameter 'mapId' when calling mapsMapIdLikesGet");
+      }
+
+      let pathParams = {
+        'map_id': mapId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Like];
+      return this.apiClient.callApi(
+        '/maps/{map_id}/likes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -300,6 +344,92 @@ export default class LikesApi {
       let returnType = Review;
       return this.apiClient.callApi(
         '/reviews/{review_id}/like', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewsReviewIdLikesGet operation.
+     * @callback module:api/LikesApi~reviewsReviewIdLikesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Like>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch review likes
+     * Fetch likes on Review
+     * @param {Number} reviewId A valid Review ID.
+     * @param {module:api/LikesApi~reviewsReviewIdLikesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Like>}
+     */
+    reviewsReviewIdLikesGet(reviewId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdLikesGet");
+      }
+
+      let pathParams = {
+        'review_id': reviewId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Like];
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/likes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the usersUserIdLikesGet operation.
+     * @callback module:api/LikesApi~usersUserIdLikesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Like>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch user likes
+     * Fetch likes by User
+     * @param {Number} userId A valid User ID.
+     * @param {module:api/LikesApi~usersUserIdLikesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Like>}
+     */
+    usersUserIdLikesGet(userId, callback) {
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling usersUserIdLikesGet");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Like];
+      return this.apiClient.callApi(
+        '/users/{user_id}/likes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
