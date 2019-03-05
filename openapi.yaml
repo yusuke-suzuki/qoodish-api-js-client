@@ -308,6 +308,12 @@ paths:
             type: boolean
           description: Filter active maps with this option.
           example: true
+        - name: recommend
+          in: query
+          schema:
+            type: boolean
+          description: Filter recommend maps with this option.
+          example: true
         - name: recent
           in: query
           schema:
