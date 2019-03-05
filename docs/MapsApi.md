@@ -32,6 +32,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new QoodishApi.MapsApi();
 let opts = {
   'active': true, // Boolean | Filter active maps with this option.
+  'recommend': true, // Boolean | Filter recommend maps with this option.
   'recent': true, // Boolean | Filter recent maps with this option.
   'popular': true, // Boolean | Filter popular maps with this option.
   'postable': true, // Boolean | Filter postable maps with this option.
@@ -51,6 +52,7 @@ apiInstance.mapsGet(opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | **Boolean**| Filter active maps with this option. | [optional] 
+ **recommend** | **Boolean**| Filter recommend maps with this option. | [optional] 
  **recent** | **Boolean**| Filter recent maps with this option. | [optional] 
  **popular** | **Boolean**| Filter popular maps with this option. | [optional] 
  **postable** | **Boolean**| Filter postable maps with this option. | [optional] 

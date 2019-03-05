@@ -48,6 +48,7 @@ export default class MapsApi {
      * List Maps. 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.active Filter active maps with this option.
+     * @param {Boolean} opts.recommend Filter recommend maps with this option.
      * @param {Boolean} opts.recent Filter recent maps with this option.
      * @param {Boolean} opts.popular Filter popular maps with this option.
      * @param {Boolean} opts.postable Filter postable maps with this option.
@@ -63,6 +64,7 @@ export default class MapsApi {
       };
       let queryParams = {
         'active': opts['active'],
+        'recommend': opts['recommend'],
         'recent': opts['recent'],
         'popular': opts['popular'],
         'postable': opts['postable'],
