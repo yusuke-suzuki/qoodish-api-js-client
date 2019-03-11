@@ -67,6 +67,9 @@ class Comment {
             if (data.hasOwnProperty('liked')) {
                 obj['liked'] = ApiClient.convertToType(data['liked'], 'Boolean');
             }
+            if (data.hasOwnProperty('likes_count')) {
+                obj['likes_count'] = ApiClient.convertToType(data['likes_count'], 'Number');
+            }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
             }
@@ -106,6 +109,11 @@ Comment.prototype['editable'] = undefined;
  * @member {Boolean} liked
  */
 Comment.prototype['liked'] = undefined;
+
+/**
+ * @member {Number} likes_count
+ */
+Comment.prototype['likes_count'] = undefined;
 
 /**
  * @member {String} created_at
