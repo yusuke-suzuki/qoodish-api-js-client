@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**mapsMapIdLikesGet**](LikesApi.md#mapsMapIdLikesGet) | **GET** /maps/{map_id}/likes | Fetch map likes
 [**reviewsReviewIdCommentsCommentIdLikeDelete**](LikesApi.md#reviewsReviewIdCommentsCommentIdLikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}/like | Unlike review comment
 [**reviewsReviewIdCommentsCommentIdLikePost**](LikesApi.md#reviewsReviewIdCommentsCommentIdLikePost) | **POST** /reviews/{review_id}/comments/{comment_id}/like | Like review comment
+[**reviewsReviewIdCommentsCommentIdLikesGet**](LikesApi.md#reviewsReviewIdCommentsCommentIdLikesGet) | **GET** /reviews/{review_id}/comments/{comment_id}/likes | Fetch comment likes
 [**reviewsReviewIdLikeDelete**](LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
 [**reviewsReviewIdLikePost**](LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
 [**reviewsReviewIdLikesGet**](LikesApi.md#reviewsReviewIdLikesGet) | **GET** /reviews/{review_id}/likes | Fetch review likes
@@ -249,6 +250,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Review**](Review.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="reviewsReviewIdCommentsCommentIdLikesGet"></a>
+# **reviewsReviewIdCommentsCommentIdLikesGet**
+> [Like] reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId)
+
+Fetch comment likes
+
+Fetch comment likes. 
+
+### Example
+```javascript
+import QoodishApi from 'qoodish_api';
+let defaultClient = QoodishApi.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApi.LikesApi();
+let reviewId = 1; // Number | A valid Review ID.
+let commentId = 1; // Number | A valid Comment ID.
+apiInstance.reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reviewId** | **Number**| A valid Review ID. | 
+ **commentId** | **Number**| A valid Comment ID. | 
+
+### Return type
+
+[**[Like]**](Like.md)
 
 ### Authorization
 

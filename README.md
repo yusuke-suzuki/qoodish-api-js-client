@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 *QoodishApi.LikesApi* | [**mapsMapIdLikesGet**](docs/LikesApi.md#mapsMapIdLikesGet) | **GET** /maps/{map_id}/likes | Fetch map likes
 *QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdLikeDelete**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdLikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}/like | Unlike review comment
 *QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdLikePost**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdLikePost) | **POST** /reviews/{review_id}/comments/{comment_id}/like | Like review comment
+*QoodishApi.LikesApi* | [**reviewsReviewIdCommentsCommentIdLikesGet**](docs/LikesApi.md#reviewsReviewIdCommentsCommentIdLikesGet) | **GET** /reviews/{review_id}/comments/{comment_id}/likes | Fetch comment likes
 *QoodishApi.LikesApi* | [**reviewsReviewIdLikeDelete**](docs/LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
 *QoodishApi.LikesApi* | [**reviewsReviewIdLikePost**](docs/LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
 *QoodishApi.LikesApi* | [**reviewsReviewIdLikesGet**](docs/LikesApi.md#reviewsReviewIdLikesGet) | **GET** /reviews/{review_id}/likes | Fetch review likes

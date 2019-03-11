@@ -1087,6 +1087,41 @@ paths:
           description: Authentication has failed.
         404:
           description: Resource not found.
+  /reviews/{review_id}/comments/{comment_id}/likes:
+    get:
+      tags:
+        - Likes
+      summary: Fetch comment likes
+      description: |
+        Fetch comment likes.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+        - name: comment_id
+          in: path
+          required: true
+          description: A valid Comment ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Like"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
   /reviews/{review_id}/comments/{comment_id}/like:
     post:
       tags:
@@ -1613,6 +1648,9 @@ components:
         liked:
           type: boolean
           example: true
+        likes_count:
+          type: integer
+          example: 5
         created_at:
           type: string
           example: "2019-02-19T08:19:32.000Z"

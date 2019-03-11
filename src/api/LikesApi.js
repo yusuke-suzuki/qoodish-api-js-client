@@ -264,6 +264,55 @@ export default class LikesApi {
     }
 
     /**
+     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdLikesGet operation.
+     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Like>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch comment likes
+     * Fetch comment likes. 
+     * @param {Number} reviewId A valid Review ID.
+     * @param {Number} commentId A valid Comment ID.
+     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Like>}
+     */
+    reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'reviewId' is set
+      if (reviewId === undefined || reviewId === null) {
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdLikesGet");
+      }
+      // verify the required parameter 'commentId' is set
+      if (commentId === undefined || commentId === null) {
+        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdLikesGet");
+      }
+
+      let pathParams = {
+        'review_id': reviewId,
+        'comment_id': commentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Like];
+      return this.apiClient.callApi(
+        '/reviews/{review_id}/comments/{comment_id}/likes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the reviewsReviewIdLikeDelete operation.
      * @callback module:api/LikesApi~reviewsReviewIdLikeDeleteCallback
      * @param {String} error Error message, if any.

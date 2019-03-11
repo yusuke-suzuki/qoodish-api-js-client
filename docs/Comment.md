@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **body** | **String** |  | [optional] 
 **editable** | **Boolean** |  | [optional] 
 **liked** | **Boolean** |  | [optional] 
+**likesCount** | **Number** |  | [optional] 
 **createdAt** | **String** |  | [optional] 
 
 
