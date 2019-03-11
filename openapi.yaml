@@ -1648,6 +1648,9 @@ components:
         liked:
           type: boolean
           example: true
+        likes_count:
+          type: integer
+          example: 5
         created_at:
           type: string
           example: "2019-02-19T08:19:32.000Z"
