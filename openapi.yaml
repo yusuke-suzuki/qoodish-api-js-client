@@ -1087,7 +1087,7 @@ paths:
           description: Authentication has failed.
         404:
           description: Resource not found.
-  /reviews/{review_id}/comments/{comment_id}like:
+  /reviews/{review_id}/comments/{comment_id}/like:
     post:
       tags:
         - Likes

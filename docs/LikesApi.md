@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**mapsMapIdLikeDelete**](LikesApi.md#mapsMapIdLikeDelete) | **DELETE** /maps/{map_id}/like | Unlike map
 [**mapsMapIdLikePost**](LikesApi.md#mapsMapIdLikePost) | **POST** /maps/{map_id}/like | Like map
 [**mapsMapIdLikesGet**](LikesApi.md#mapsMapIdLikesGet) | **GET** /maps/{map_id}/likes | Fetch map likes
-[**reviewsReviewIdCommentsCommentIdlikeDelete**](LikesApi.md#reviewsReviewIdCommentsCommentIdlikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}like | Unlike review comment
-[**reviewsReviewIdCommentsCommentIdlikePost**](LikesApi.md#reviewsReviewIdCommentsCommentIdlikePost) | **POST** /reviews/{review_id}/comments/{comment_id}like | Like review comment
+[**reviewsReviewIdCommentsCommentIdLikeDelete**](LikesApi.md#reviewsReviewIdCommentsCommentIdLikeDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id}/like | Unlike review comment
+[**reviewsReviewIdCommentsCommentIdLikePost**](LikesApi.md#reviewsReviewIdCommentsCommentIdLikePost) | **POST** /reviews/{review_id}/comments/{comment_id}/like | Like review comment
 [**reviewsReviewIdLikeDelete**](LikesApi.md#reviewsReviewIdLikeDelete) | **DELETE** /reviews/{review_id}/like | Unlike review
 [**reviewsReviewIdLikePost**](LikesApi.md#reviewsReviewIdLikePost) | **POST** /reviews/{review_id}/like | Like review
 [**reviewsReviewIdLikesGet**](LikesApi.md#reviewsReviewIdLikesGet) | **GET** /reviews/{review_id}/likes | Fetch review likes
@@ -159,9 +159,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsCommentIdlikeDelete"></a>
-# **reviewsReviewIdCommentsCommentIdlikeDelete**
-> Review reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId)
+<a name="reviewsReviewIdCommentsCommentIdLikeDelete"></a>
+# **reviewsReviewIdCommentsCommentIdLikeDelete**
+> Review reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId)
 
 Unlike review comment
 
@@ -180,7 +180,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new QoodishApi.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 let commentId = 1; // Number | A valid Comment ID.
-apiInstance.reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId, (error, data, response) => {
+apiInstance.reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -209,9 +209,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsCommentIdlikePost"></a>
-# **reviewsReviewIdCommentsCommentIdlikePost**
-> Review reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId)
+<a name="reviewsReviewIdCommentsCommentIdLikePost"></a>
+# **reviewsReviewIdCommentsCommentIdLikePost**
+> Review reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId)
 
 Like review comment
 
@@ -230,7 +230,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new QoodishApi.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 let commentId = 1; // Number | A valid Comment ID.
-apiInstance.reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId, (error, data, response) => {
+apiInstance.reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

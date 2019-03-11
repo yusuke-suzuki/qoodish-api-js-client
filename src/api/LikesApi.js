@@ -166,8 +166,8 @@ export default class LikesApi {
     }
 
     /**
-     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdlikeDelete operation.
-     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikeDeleteCallback
+     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdLikeDelete operation.
+     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikeDeleteCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Review} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -178,18 +178,18 @@ export default class LikesApi {
      * Unlike target review comment. 
      * @param {Number} reviewId A valid Review ID.
      * @param {Number} commentId A valid Comment ID.
-     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Review}
      */
-    reviewsReviewIdCommentsCommentIdlikeDelete(reviewId, commentId, callback) {
+    reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId, callback) {
       let postBody = null;
       // verify the required parameter 'reviewId' is set
       if (reviewId === undefined || reviewId === null) {
-        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdlikeDelete");
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdLikeDelete");
       }
       // verify the required parameter 'commentId' is set
       if (commentId === undefined || commentId === null) {
-        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdlikeDelete");
+        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdLikeDelete");
       }
 
       let pathParams = {
@@ -208,15 +208,15 @@ export default class LikesApi {
       let accepts = ['application/json'];
       let returnType = Review;
       return this.apiClient.callApi(
-        '/reviews/{review_id}/comments/{comment_id}like', 'DELETE',
+        '/reviews/{review_id}/comments/{comment_id}/like', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdlikePost operation.
-     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikePostCallback
+     * Callback function to receive the result of the reviewsReviewIdCommentsCommentIdLikePost operation.
+     * @callback module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikePostCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Review} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -227,18 +227,18 @@ export default class LikesApi {
      * Like target review comment. 
      * @param {Number} reviewId A valid Review ID.
      * @param {Number} commentId A valid Comment ID.
-     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdlikePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/LikesApi~reviewsReviewIdCommentsCommentIdLikePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Review}
      */
-    reviewsReviewIdCommentsCommentIdlikePost(reviewId, commentId, callback) {
+    reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId, callback) {
       let postBody = null;
       // verify the required parameter 'reviewId' is set
       if (reviewId === undefined || reviewId === null) {
-        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdlikePost");
+        throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsCommentIdLikePost");
       }
       // verify the required parameter 'commentId' is set
       if (commentId === undefined || commentId === null) {
-        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdlikePost");
+        throw new Error("Missing the required parameter 'commentId' when calling reviewsReviewIdCommentsCommentIdLikePost");
       }
 
       let pathParams = {
@@ -257,7 +257,7 @@ export default class LikesApi {
       let accepts = ['application/json'];
       let returnType = Review;
       return this.apiClient.callApi(
-        '/reviews/{review_id}/comments/{comment_id}like', 'POST',
+        '/reviews/{review_id}/comments/{comment_id}/like', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
