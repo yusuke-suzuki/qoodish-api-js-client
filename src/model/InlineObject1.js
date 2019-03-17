@@ -47,8 +47,8 @@ class InlineObject1 {
         if (data) {
             obj = obj || new InlineObject1();
 
-            if (data.hasOwnProperty('registration_token')) {
-                obj['registration_token'] = ApiClient.convertToType(data['registration_token'], 'String');
+            if (data.hasOwnProperty('comment')) {
+                obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineObject1 {
 }
 
 /**
- * @member {String} registration_token
+ * @member {String} comment
  */
-InlineObject1.prototype['registration_token'] = undefined;
+InlineObject1.prototype['comment'] = undefined;
 
 
 

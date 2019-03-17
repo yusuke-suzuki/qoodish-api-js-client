@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="devicesPost"></a>
 # **devicesPost**
-> devicesPost(inlineObject1)
+> devicesPost(inlineObject)
 
 Register device
 
@@ -27,8 +27,8 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 //firebaseAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new QoodishApi.DevicesApi();
-let inlineObject1 = new QoodishApi.InlineObject1(); // InlineObject1 | 
-apiInstance.devicesPost(inlineObject1, (error, data, response) => {
+let inlineObject = new QoodishApi.InlineObject(); // InlineObject | 
+apiInstance.devicesPost(inlineObject, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -41,7 +41,7 @@ apiInstance.devicesPost(inlineObject1, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | 
 
 ### Return type
 

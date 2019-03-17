@@ -73,7 +73,7 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new QoodishApi.NotificationsApi();
 let notificationId = 1; // Number | A valid Notification ID.
 let opts = {
-  'inlineObject3': new QoodishApi.InlineObject3() // InlineObject3 | 
+  'inlineObject2': new QoodishApi.InlineObject2() // InlineObject2 | 
 };
 apiInstance.notificationsNotificationIdPut(notificationId, opts, (error, data, response) => {
   if (error) {
@@ -89,7 +89,7 @@ apiInstance.notificationsNotificationIdPut(notificationId, opts, (error, data, r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **notificationId** | **Number**| A valid Notification ID. | 
- **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
 

@@ -124,8 +124,7 @@ Class | Method | HTTP request | Description
 *QoodishApi.NotificationsApi* | [**notificationsGet**](docs/NotificationsApi.md#notificationsGet) | **GET** /notifications | Fetch notifications
 *QoodishApi.NotificationsApi* | [**notificationsNotificationIdPut**](docs/NotificationsApi.md#notificationsNotificationIdPut) | **PUT** /notifications/{notification_id} | Update notification
 *QoodishApi.PlacesApi* | [**placesGet**](docs/PlacesApi.md#placesGet) | **GET** /places | Fetch places
-*QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationDelete**](docs/PushNotificationApi.md#usersUserIdPushNotificationDelete) | **DELETE** /users/{user_id}/push_notification | Disable push notification
-*QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPost**](docs/PushNotificationApi.md#usersUserIdPushNotificationPost) | **POST** /users/{user_id}/push_notification | Enable push notification
+*QoodishApi.PushNotificationApi* | [**usersUserIdPushNotificationPut**](docs/PushNotificationApi.md#usersUserIdPushNotificationPut) | **PUT** /users/{user_id}/push_notification | Update push notification
 *QoodishApi.ReviewsApi* | [**mapsMapIdReviewsGet**](docs/ReviewsApi.md#mapsMapIdReviewsGet) | **GET** /maps/{map_id}/reviews | Fetch map reviews
 *QoodishApi.ReviewsApi* | [**mapsMapIdReviewsPost**](docs/ReviewsApi.md#mapsMapIdReviewsPost) | **POST** /maps/{map_id}/reviews | Create review
 *QoodishApi.ReviewsApi* | [**mapsMapIdReviewsReviewIdGet**](docs/ReviewsApi.md#mapsMapIdReviewsReviewIdGet) | **GET** /maps/{map_id}/reviews/{review_id} | Fetch review
@@ -155,7 +154,6 @@ Class | Method | HTTP request | Description
  - [QoodishApi.InlineObject](docs/InlineObject.md)
  - [QoodishApi.InlineObject1](docs/InlineObject1.md)
  - [QoodishApi.InlineObject2](docs/InlineObject2.md)
- - [QoodishApi.InlineObject3](docs/InlineObject3.md)
  - [QoodishApi.Invite](docs/Invite.md)
  - [QoodishApi.InviteInvitable](docs/InviteInvitable.md)
  - [QoodishApi.Like](docs/Like.md)
@@ -168,6 +166,7 @@ Class | Method | HTTP request | Description
  - [QoodishApi.Notification](docs/Notification.md)
  - [QoodishApi.NotificationNotifiable](docs/NotificationNotifiable.md)
  - [QoodishApi.Place](docs/Place.md)
+ - [QoodishApi.PushNotification](docs/PushNotification.md)
  - [QoodishApi.Review](docs/Review.md)
  - [QoodishApi.ReviewImage](docs/ReviewImage.md)
  - [QoodishApi.ReviewMap](docs/ReviewMap.md)

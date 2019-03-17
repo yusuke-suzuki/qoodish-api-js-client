@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject3 from '../model/InlineObject3';
+import InlineObject2 from '../model/InlineObject2';
 import Notification from '../model/Notification';
 
 /**
@@ -85,13 +85,13 @@ export default class NotificationsApi {
      * Update notification.
      * @param {Number} notificationId A valid Notification ID.
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject3} opts.inlineObject3 
+     * @param {module:model/InlineObject2} opts.inlineObject2 
      * @param {module:api/NotificationsApi~notificationsNotificationIdPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Notification}
      */
     notificationsNotificationIdPut(notificationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject3'];
+      let postBody = opts['inlineObject2'];
       // verify the required parameter 'notificationId' is set
       if (notificationId === undefined || notificationId === null) {
         throw new Error("Missing the required parameter 'notificationId' when calling notificationsNotificationIdPut");

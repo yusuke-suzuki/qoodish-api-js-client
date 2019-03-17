@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **followingMapsCount** | **Number** |  | [optional] 
 **reviewsCount** | **Number** |  | [optional] 
 **likesCount** | **Number** |  | [optional] 
-**pushEnabled** | **Boolean** |  | [optional] 
+**pushNotification** | [**PushNotification**](PushNotification.md) |  | [optional] 
 
 

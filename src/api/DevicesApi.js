@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject1 from '../model/InlineObject1';
+import InlineObject from '../model/InlineObject';
 
 /**
 * Devices service.
@@ -45,14 +45,14 @@ export default class DevicesApi {
     /**
      * Register device
      * Register device with registration token.
-     * @param {module:model/InlineObject1} inlineObject1 
+     * @param {module:model/InlineObject} inlineObject 
      * @param {module:api/DevicesApi~devicesPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    devicesPost(inlineObject1, callback) {
-      let postBody = inlineObject1;
-      // verify the required parameter 'inlineObject1' is set
-      if (inlineObject1 === undefined || inlineObject1 === null) {
-        throw new Error("Missing the required parameter 'inlineObject1' when calling devicesPost");
+    devicesPost(inlineObject, callback) {
+      let postBody = inlineObject;
+      // verify the required parameter 'inlineObject' is set
+      if (inlineObject === undefined || inlineObject === null) {
+        throw new Error("Missing the required parameter 'inlineObject' when calling devicesPost");
       }
 
       let pathParams = {
