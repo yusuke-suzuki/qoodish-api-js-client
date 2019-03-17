@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PushNotification from './PushNotification';
 
 /**
  * The CurrentUser model module.
@@ -84,8 +85,8 @@ class CurrentUser {
             if (data.hasOwnProperty('likes_count')) {
                 obj['likes_count'] = ApiClient.convertToType(data['likes_count'], 'Number');
             }
-            if (data.hasOwnProperty('push_enabled')) {
-                obj['push_enabled'] = ApiClient.convertToType(data['push_enabled'], 'Boolean');
+            if (data.hasOwnProperty('push_notification')) {
+                obj['push_notification'] = PushNotification.constructFromObject(data['push_notification']);
             }
         }
         return obj;
@@ -155,9 +156,9 @@ CurrentUser.prototype['reviews_count'] = undefined;
 CurrentUser.prototype['likes_count'] = undefined;
 
 /**
- * @member {Boolean} push_enabled
+ * @member {module:model/PushNotification} push_notification
  */
-CurrentUser.prototype['push_enabled'] = undefined;
+CurrentUser.prototype['push_notification'] = undefined;
 
 
 

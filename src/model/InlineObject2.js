@@ -47,8 +47,8 @@ class InlineObject2 {
         if (data) {
             obj = obj || new InlineObject2();
 
-            if (data.hasOwnProperty('comment')) {
-                obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
+            if (data.hasOwnProperty('read')) {
+                obj['read'] = ApiClient.convertToType(data['read'], 'Boolean');
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineObject2 {
 }
 
 /**
- * @member {String} comment
+ * @member {Boolean} read
  */
-InlineObject2.prototype['comment'] = undefined;
+InlineObject2.prototype['read'] = undefined;
 
 
 

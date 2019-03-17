@@ -169,11 +169,11 @@ paths:
         404:
           description: Resource not found.
   /users/{user_id}/push_notification:
-    post:
+    put:
       tags:
         - Push Notification
-      summary: Enable push notification
-      description: Enable push notification.
+      summary: Update push notification
+      description: Update push notification.
       parameters:
         - name: user_id
           in: path
@@ -186,36 +186,8 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                registration_token:
-                  type: string
-                  example: 12345abcdef
+              $ref: "#/components/schemas/PushNotification"
         required: true
-      responses:
-        200:
-          description: Request was successful.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/CurrentUser"
-        400:
-          description: Invalid parameter specified.
-        401:
-          description: Authentication has failed.
-    delete:
-      tags:
-        - Push Notification
-      summary: Disable push notification
-      description: Disable push notification.
-      parameters:
-        - name: user_id
-          in: path
-          required: true
-          description: A valid User ID.
-          example: 1
-          schema:
-            type: integer
       responses:
         200:
           description: Request was successful.
@@ -1434,7 +1406,21 @@ components:
         likes_count:
           type: integer
           example: 10
-        push_enabled:
+        push_notification:
+          $ref: "#/components/schemas/PushNotification"
+    PushNotification:
+      type: object
+      properties:
+        followed:
+          type: boolean
+          example: true
+        liked:
+          type: boolean
+          example: true
+        invited:
+          type: boolean
+          example: true
+        comment:
           type: boolean
           example: true
     NewMap:

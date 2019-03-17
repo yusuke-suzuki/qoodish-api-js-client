@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CurrentUser from '../model/CurrentUser';
-import InlineObject from '../model/InlineObject';
+import PushNotification from '../model/PushNotification';
 
 /**
 * PushNotification service.
@@ -36,73 +36,30 @@ export default class PushNotificationApi {
 
 
     /**
-     * Callback function to receive the result of the usersUserIdPushNotificationDelete operation.
-     * @callback module:api/PushNotificationApi~usersUserIdPushNotificationDeleteCallback
+     * Callback function to receive the result of the usersUserIdPushNotificationPut operation.
+     * @callback module:api/PushNotificationApi~usersUserIdPushNotificationPutCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CurrentUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Disable push notification
-     * Disable push notification.
+     * Update push notification
+     * Update push notification.
      * @param {Number} userId A valid User ID.
-     * @param {module:api/PushNotificationApi~usersUserIdPushNotificationDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/PushNotification} pushNotification 
+     * @param {module:api/PushNotificationApi~usersUserIdPushNotificationPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CurrentUser}
      */
-    usersUserIdPushNotificationDelete(userId, callback) {
-      let postBody = null;
+    usersUserIdPushNotificationPut(userId, pushNotification, callback) {
+      let postBody = pushNotification;
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersUserIdPushNotificationDelete");
+        throw new Error("Missing the required parameter 'userId' when calling usersUserIdPushNotificationPut");
       }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['firebaseAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = CurrentUser;
-      return this.apiClient.callApi(
-        '/users/{user_id}/push_notification', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the usersUserIdPushNotificationPost operation.
-     * @callback module:api/PushNotificationApi~usersUserIdPushNotificationPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CurrentUser} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Enable push notification
-     * Enable push notification.
-     * @param {Number} userId A valid User ID.
-     * @param {module:model/InlineObject} inlineObject 
-     * @param {module:api/PushNotificationApi~usersUserIdPushNotificationPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CurrentUser}
-     */
-    usersUserIdPushNotificationPost(userId, inlineObject, callback) {
-      let postBody = inlineObject;
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersUserIdPushNotificationPost");
-      }
-      // verify the required parameter 'inlineObject' is set
-      if (inlineObject === undefined || inlineObject === null) {
-        throw new Error("Missing the required parameter 'inlineObject' when calling usersUserIdPushNotificationPost");
+      // verify the required parameter 'pushNotification' is set
+      if (pushNotification === undefined || pushNotification === null) {
+        throw new Error("Missing the required parameter 'pushNotification' when calling usersUserIdPushNotificationPut");
       }
 
       let pathParams = {
@@ -120,7 +77,7 @@ export default class PushNotificationApi {
       let accepts = ['application/json'];
       let returnType = CurrentUser;
       return this.apiClient.callApi(
-        '/users/{user_id}/push_notification', 'POST',
+        '/users/{user_id}/push_notification', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

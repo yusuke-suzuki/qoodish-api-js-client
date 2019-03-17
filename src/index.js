@@ -21,7 +21,6 @@ import InappropreateContent from './model/InappropreateContent';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
 import InlineObject2 from './model/InlineObject2';
-import InlineObject3 from './model/InlineObject3';
 import Invite from './model/Invite';
 import InviteInvitable from './model/InviteInvitable';
 import Like from './model/Like';
@@ -34,6 +33,7 @@ import NewUser from './model/NewUser';
 import Notification from './model/Notification';
 import NotificationNotifiable from './model/NotificationNotifiable';
 import Place from './model/Place';
+import PushNotification from './model/PushNotification';
 import Review from './model/Review';
 import ReviewImage from './model/ReviewImage';
 import ReviewMap from './model/ReviewMap';
@@ -142,12 +142,6 @@ export {
     InlineObject2,
 
     /**
-     * The InlineObject3 model constructor.
-     * @property {module:model/InlineObject3}
-     */
-    InlineObject3,
-
-    /**
      * The Invite model constructor.
      * @property {module:model/Invite}
      */
@@ -218,6 +212,12 @@ export {
      * @property {module:model/Place}
      */
     Place,
+
+    /**
+     * The PushNotification model constructor.
+     * @property {module:model/PushNotification}
+     */
+    PushNotification,
 
     /**
      * The Review model constructor.

@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject2 from '../model/InlineObject2';
+import InlineObject1 from '../model/InlineObject1';
 import Review from '../model/Review';
 
 /**
@@ -96,19 +96,19 @@ export default class CommentsApi {
      * Send review comment
      * Send review comment. 
      * @param {Number} reviewId A valid Review ID.
-     * @param {module:model/InlineObject2} inlineObject2 
+     * @param {module:model/InlineObject1} inlineObject1 
      * @param {module:api/CommentsApi~reviewsReviewIdCommentsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Review}
      */
-    reviewsReviewIdCommentsPost(reviewId, inlineObject2, callback) {
-      let postBody = inlineObject2;
+    reviewsReviewIdCommentsPost(reviewId, inlineObject1, callback) {
+      let postBody = inlineObject1;
       // verify the required parameter 'reviewId' is set
       if (reviewId === undefined || reviewId === null) {
         throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdCommentsPost");
       }
-      // verify the required parameter 'inlineObject2' is set
-      if (inlineObject2 === undefined || inlineObject2 === null) {
-        throw new Error("Missing the required parameter 'inlineObject2' when calling reviewsReviewIdCommentsPost");
+      // verify the required parameter 'inlineObject1' is set
+      if (inlineObject1 === undefined || inlineObject1 === null) {
+        throw new Error("Missing the required parameter 'inlineObject1' when calling reviewsReviewIdCommentsPost");
       }
 
       let pathParams = {
