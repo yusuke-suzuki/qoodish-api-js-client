@@ -47,10 +47,13 @@ export default class ReviewsApi {
      * Fetch map reviews
      * Fetch reviews on map. 
      * @param {Number} mapId A valid Map ID.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.placeId A valid Place ID.
      * @param {module:api/ReviewsApi~mapsMapIdReviewsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Review>}
      */
-    mapsMapIdReviewsGet(mapId, callback) {
+    mapsMapIdReviewsGet(mapId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'mapId' is set
       if (mapId === undefined || mapId === null) {
@@ -61,6 +64,7 @@ export default class ReviewsApi {
         'map_id': mapId
       };
       let queryParams = {
+        'place_id': opts['placeId']
       };
       let headerParams = {
       };

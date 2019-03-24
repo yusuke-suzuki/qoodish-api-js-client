@@ -720,6 +720,13 @@ paths:
           example: 1
           schema:
             type: integer
+        - name: place_id
+          in: query
+          required: false
+          description: A valid Place ID.
+          example: ml8RkRdpmMmn4WY
+          schema:
+            type: string
       responses:
         200:
           description: Request was successful.

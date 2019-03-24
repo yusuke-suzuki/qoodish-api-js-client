@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="mapsMapIdReviewsGet"></a>
 # **mapsMapIdReviewsGet**
-> [Review] mapsMapIdReviewsGet(mapId)
+> [Review] mapsMapIdReviewsGet(mapId, opts)
 
 Fetch map reviews
 
@@ -34,7 +34,10 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new QoodishApi.ReviewsApi();
 let mapId = 1; // Number | A valid Map ID.
-apiInstance.mapsMapIdReviewsGet(mapId, (error, data, response) => {
+let opts = {
+  'placeId': ml8RkRdpmMmn4WY // String | A valid Place ID.
+};
+apiInstance.mapsMapIdReviewsGet(mapId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -48,6 +51,7 @@ apiInstance.mapsMapIdReviewsGet(mapId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
+ **placeId** | **String**| A valid Place ID. | [optional] 
 
 ### Return type
 
