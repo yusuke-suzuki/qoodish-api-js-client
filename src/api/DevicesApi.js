@@ -13,7 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject from '../model/InlineObject';
 
 /**
 * Devices service.
@@ -33,47 +32,6 @@ export default class DevicesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-    /**
-     * Callback function to receive the result of the devicesPost operation.
-     * @callback module:api/DevicesApi~devicesPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Register device
-     * Register device with registration token.
-     * @param {module:model/InlineObject} inlineObject 
-     * @param {module:api/DevicesApi~devicesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    devicesPost(inlineObject, callback) {
-      let postBody = inlineObject;
-      // verify the required parameter 'inlineObject' is set
-      if (inlineObject === undefined || inlineObject === null) {
-        throw new Error("Missing the required parameter 'inlineObject' when calling devicesPost");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['firebaseAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/devices', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the devicesRegistrationTokenDelete operation.
@@ -112,6 +70,48 @@ export default class DevicesApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/devices/{registration_token}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the devicesRegistrationTokenPut operation.
+     * @callback module:api/DevicesApi~devicesRegistrationTokenPutCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Register device
+     * Register device with registration token.
+     * @param {String} registrationToken A valid registration token.
+     * @param {module:api/DevicesApi~devicesRegistrationTokenPutCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    devicesRegistrationTokenPut(registrationToken, callback) {
+      let postBody = null;
+      // verify the required parameter 'registrationToken' is set
+      if (registrationToken === undefined || registrationToken === null) {
+        throw new Error("Missing the required parameter 'registrationToken' when calling devicesRegistrationTokenPut");
+      }
+
+      let pathParams = {
+        'registration_token': registrationToken
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['firebaseAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/devices/{registration_token}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

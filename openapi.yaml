@@ -199,22 +199,20 @@ paths:
           description: Invalid parameter specified.
         401:
           description: Authentication has failed.
-  /devices:
-    post:
+  /devices/{registration_token}:
+    put:
       tags:
         - Devices
       summary: Register device
       description: Register device with registration token.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                registration_token:
-                  type: string
-                  example: 12345abcdef
-        required: true
+      parameters:
+        - name: registration_token
+          in: path
+          required: true
+          description: A valid registration token.
+          example: 12345abcdef
+          schema:
+            type: string
       responses:
         204:
           description: Request was successful.
@@ -222,7 +220,6 @@ paths:
           description: Invalid parameter specified.
         401:
           description: Authentication has failed.
-  /devices/{registration_token}:
     delete:
       tags:
         - Devices
