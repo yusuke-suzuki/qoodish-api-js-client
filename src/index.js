@@ -20,7 +20,6 @@ import CurrentUser from './model/CurrentUser';
 import InappropreateContent from './model/InappropreateContent';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
-import InlineObject2 from './model/InlineObject2';
 import Invite from './model/Invite';
 import InviteInvitable from './model/InviteInvitable';
 import Like from './model/Like';
@@ -134,12 +133,6 @@ export {
      * @property {module:model/InlineObject1}
      */
     InlineObject1,
-
-    /**
-     * The InlineObject2 model constructor.
-     * @property {module:model/InlineObject2}
-     */
-    InlineObject2,
 
     /**
      * The Invite model constructor.

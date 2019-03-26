@@ -99,8 +99,8 @@ Class | Method | HTTP request | Description
 *QoodishApi.CollaboratorsApi* | [**mapsMapIdCollaboratorsGet**](docs/CollaboratorsApi.md#mapsMapIdCollaboratorsGet) | **GET** /maps/{map_id}/collaborators | Fetch collaborators
 *QoodishApi.CommentsApi* | [**reviewsReviewIdCommentsCommentIdDelete**](docs/CommentsApi.md#reviewsReviewIdCommentsCommentIdDelete) | **DELETE** /reviews/{review_id}/comments/{comment_id} | Delete review comment
 *QoodishApi.CommentsApi* | [**reviewsReviewIdCommentsPost**](docs/CommentsApi.md#reviewsReviewIdCommentsPost) | **POST** /reviews/{review_id}/comments | Send review comment
-*QoodishApi.DevicesApi* | [**devicesPost**](docs/DevicesApi.md#devicesPost) | **POST** /devices | Register device
 *QoodishApi.DevicesApi* | [**devicesRegistrationTokenDelete**](docs/DevicesApi.md#devicesRegistrationTokenDelete) | **DELETE** /devices/{registration_token} | Delete device
+*QoodishApi.DevicesApi* | [**devicesRegistrationTokenPut**](docs/DevicesApi.md#devicesRegistrationTokenPut) | **PUT** /devices/{registration_token} | Register device
 *QoodishApi.FollowsApi* | [**mapsMapIdFollowDelete**](docs/FollowsApi.md#mapsMapIdFollowDelete) | **DELETE** /maps/{map_id}/follow | Unfollow map
 *QoodishApi.FollowsApi* | [**mapsMapIdFollowPost**](docs/FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
 *QoodishApi.InvitesApi* | [**invitesGet**](docs/InvitesApi.md#invitesGet) | **GET** /invites | Fetch invites
@@ -153,7 +153,6 @@ Class | Method | HTTP request | Description
  - [QoodishApi.InappropreateContent](docs/InappropreateContent.md)
  - [QoodishApi.InlineObject](docs/InlineObject.md)
  - [QoodishApi.InlineObject1](docs/InlineObject1.md)
- - [QoodishApi.InlineObject2](docs/InlineObject2.md)
  - [QoodishApi.Invite](docs/Invite.md)
  - [QoodishApi.InviteInvitable](docs/InviteInvitable.md)
  - [QoodishApi.Like](docs/Like.md)

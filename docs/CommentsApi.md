@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 <a name="reviewsReviewIdCommentsPost"></a>
 # **reviewsReviewIdCommentsPost**
-> Review reviewsReviewIdCommentsPost(reviewId, inlineObject1)
+> Review reviewsReviewIdCommentsPost(reviewId, inlineObject)
 
 Send review comment
 
@@ -78,8 +78,8 @@ firebaseAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new QoodishApi.CommentsApi();
 let reviewId = 1; // Number | A valid Review ID.
-let inlineObject1 = new QoodishApi.InlineObject1(); // InlineObject1 | 
-apiInstance.reviewsReviewIdCommentsPost(reviewId, inlineObject1, (error, data, response) => {
+let inlineObject = new QoodishApi.InlineObject(); // InlineObject | 
+apiInstance.reviewsReviewIdCommentsPost(reviewId, inlineObject, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -93,7 +93,7 @@ apiInstance.reviewsReviewIdCommentsPost(reviewId, inlineObject1, (error, data, r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
- **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | 
 
 ### Return type
 
