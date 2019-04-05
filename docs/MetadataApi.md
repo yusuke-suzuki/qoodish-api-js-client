@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="mapsMapIdMetadataGet"></a>
 # **mapsMapIdMetadataGet**
-> Metadata mapsMapIdMetadataGet(mapId)
+> Metadata mapsMapIdMetadataGet(mapId, acceptLanguage)
 
 Get Map metadata
 
@@ -23,7 +23,8 @@ import QoodishApi from 'qoodish_api';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let mapId = 1; // Number | A valid Map ID.
-apiInstance.mapsMapIdMetadataGet(mapId, (error, data, response) => {
+let acceptLanguage = ja; // String | 
+apiInstance.mapsMapIdMetadataGet(mapId, acceptLanguage, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -37,6 +38,7 @@ apiInstance.mapsMapIdMetadataGet(mapId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
+ **acceptLanguage** | **String**|  | 
 
 ### Return type
 
@@ -53,7 +55,7 @@ No authorization required
 
 <a name="reviewsReviewIdMetadataGet"></a>
 # **reviewsReviewIdMetadataGet**
-> Metadata reviewsReviewIdMetadataGet(reviewId)
+> Metadata reviewsReviewIdMetadataGet(reviewId, acceptLanguage)
 
 Get Review metadata
 
@@ -65,7 +67,8 @@ import QoodishApi from 'qoodish_api';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let reviewId = 1; // Number | A valid Review ID.
-apiInstance.reviewsReviewIdMetadataGet(reviewId, (error, data, response) => {
+let acceptLanguage = ja; // String | 
+apiInstance.reviewsReviewIdMetadataGet(reviewId, acceptLanguage, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -79,6 +82,7 @@ apiInstance.reviewsReviewIdMetadataGet(reviewId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
+ **acceptLanguage** | **String**|  | 
 
 ### Return type
 
@@ -95,7 +99,7 @@ No authorization required
 
 <a name="spotsPlaceIdMetadataGet"></a>
 # **spotsPlaceIdMetadataGet**
-> Metadata spotsPlaceIdMetadataGet(placeId)
+> Metadata spotsPlaceIdMetadataGet(placeId, acceptLanguage)
 
 Get Spot metadata
 
@@ -107,7 +111,8 @@ import QoodishApi from 'qoodish_api';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let placeId = ml8RkRdpmMmn4WY; // String | A valid Place ID.
-apiInstance.spotsPlaceIdMetadataGet(placeId, (error, data, response) => {
+let acceptLanguage = ja; // String | 
+apiInstance.spotsPlaceIdMetadataGet(placeId, acceptLanguage, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -121,6 +126,7 @@ apiInstance.spotsPlaceIdMetadataGet(placeId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **placeId** | **String**| A valid Place ID. | 
+ **acceptLanguage** | **String**|  | 
 
 ### Return type
 
