@@ -121,6 +121,9 @@ Class | Method | HTTP request | Description
 *QoodishApi.MapsApi* | [**mapsMapIdGet**](docs/MapsApi.md#mapsMapIdGet) | **GET** /maps/{map_id} | Get Map detail
 *QoodishApi.MapsApi* | [**mapsMapIdPut**](docs/MapsApi.md#mapsMapIdPut) | **PUT** /maps/{map_id} | Update a Map
 *QoodishApi.MapsApi* | [**mapsPost**](docs/MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
+*QoodishApi.MetadataApi* | [**mapsMapIdMetadataGet**](docs/MetadataApi.md#mapsMapIdMetadataGet) | **GET** /maps/{map_id}/metadata | Get Map metadata
+*QoodishApi.MetadataApi* | [**reviewsReviewIdMetadataGet**](docs/MetadataApi.md#reviewsReviewIdMetadataGet) | **GET** /reviews/{review_id}/metadata | Get Review metadata
+*QoodishApi.MetadataApi* | [**spotsPlaceIdMetadataGet**](docs/MetadataApi.md#spotsPlaceIdMetadataGet) | **GET** /spots/{place_id}/metadata | Get Spot metadata
 *QoodishApi.NotificationsApi* | [**notificationsGet**](docs/NotificationsApi.md#notificationsGet) | **GET** /notifications | Fetch notifications
 *QoodishApi.NotificationsApi* | [**notificationsNotificationIdPut**](docs/NotificationsApi.md#notificationsNotificationIdPut) | **PUT** /notifications/{notification_id} | Update notification
 *QoodishApi.PlacesApi* | [**placesGet**](docs/PlacesApi.md#placesGet) | **GET** /places | Fetch places
@@ -158,6 +161,7 @@ Class | Method | HTTP request | Description
  - [QoodishApi.Like](docs/Like.md)
  - [QoodishApi.MapDetail](docs/MapDetail.md)
  - [QoodishApi.MapDetailBase](docs/MapDetailBase.md)
+ - [QoodishApi.Metadata](docs/Metadata.md)
  - [QoodishApi.NewInvite](docs/NewInvite.md)
  - [QoodishApi.NewMap](docs/NewMap.md)
  - [QoodishApi.NewReview](docs/NewReview.md)
