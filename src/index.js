@@ -25,6 +25,7 @@ import InviteInvitable from './model/InviteInvitable';
 import Like from './model/Like';
 import MapDetail from './model/MapDetail';
 import MapDetailBase from './model/MapDetailBase';
+import Metadata from './model/Metadata';
 import NewInvite from './model/NewInvite';
 import NewMap from './model/NewMap';
 import NewReview from './model/NewReview';
@@ -45,6 +46,7 @@ import InvitesApi from './api/InvitesApi';
 import IssueContentsApi from './api/IssueContentsApi';
 import LikesApi from './api/LikesApi';
 import MapsApi from './api/MapsApi';
+import MetadataApi from './api/MetadataApi';
 import NotificationsApi from './api/NotificationsApi';
 import PlacesApi from './api/PlacesApi';
 import PushNotificationApi from './api/PushNotificationApi';
@@ -165,6 +167,12 @@ export {
     MapDetailBase,
 
     /**
+     * The Metadata model constructor.
+     * @property {module:model/Metadata}
+     */
+    Metadata,
+
+    /**
      * The NewInvite model constructor.
      * @property {module:model/NewInvite}
      */
@@ -283,6 +291,12 @@ export {
     * @property {module:api/MapsApi}
     */
     MapsApi,
+
+    /**
+    * The MetadataApi service constructor.
+    * @property {module:api/MetadataApi}
+    */
+    MetadataApi,
 
     /**
     * The NotificationsApi service constructor.
