@@ -1359,6 +1359,12 @@ paths:
           example: 1
           schema:
             type: integer
+        - name: Accept-Language
+          in: header
+          required: true
+          example: ja
+          schema:
+            type: string
       responses:
         200:
           description: Request was successful.
@@ -1384,6 +1390,12 @@ paths:
           example: 1
           schema:
             type: integer
+        - name: Accept-Language
+          in: header
+          required: true
+          example: ja
+          schema:
+            type: string
       responses:
         200:
           description: Request was successful.
@@ -1407,6 +1419,12 @@ paths:
           required: true
           description: A valid Place ID.
           example: ml8RkRdpmMmn4WY
+          schema:
+            type: string
+        - name: Accept-Language
+          in: header
+          required: true
+          example: ja
           schema:
             type: string
       responses:
