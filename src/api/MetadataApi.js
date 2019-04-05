@@ -66,7 +66,7 @@ export default class MetadataApi {
       let formParams = {
       };
 
-      let authNames = ['firebaseAuth'];
+      let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Metadata;
@@ -109,7 +109,7 @@ export default class MetadataApi {
       let formParams = {
       };
 
-      let authNames = ['firebaseAuth'];
+      let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Metadata;
@@ -152,7 +152,7 @@ export default class MetadataApi {
       let formParams = {
       };
 
-      let authNames = ['firebaseAuth'];
+      let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Metadata;

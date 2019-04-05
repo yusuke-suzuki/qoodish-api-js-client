@@ -20,12 +20,6 @@ Get Map metadata.
 ### Example
 ```javascript
 import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
-// Configure API key authorization: firebaseAuth
-let firebaseAuth = defaultClient.authentications['firebaseAuth'];
-firebaseAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//firebaseAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let mapId = 1; // Number | A valid Map ID.
@@ -50,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[firebaseAuth](../README.md#firebaseAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -68,12 +62,6 @@ Get Review metadata.
 ### Example
 ```javascript
 import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
-// Configure API key authorization: firebaseAuth
-let firebaseAuth = defaultClient.authentications['firebaseAuth'];
-firebaseAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//firebaseAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let reviewId = 1; // Number | A valid Review ID.
@@ -98,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[firebaseAuth](../README.md#firebaseAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -116,12 +104,6 @@ Get Spot metadata.
 ### Example
 ```javascript
 import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
-// Configure API key authorization: firebaseAuth
-let firebaseAuth = defaultClient.authentications['firebaseAuth'];
-firebaseAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//firebaseAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new QoodishApi.MetadataApi();
 let placeId = ml8RkRdpmMmn4WY; // String | A valid Place ID.
@@ -146,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[firebaseAuth](../README.md#firebaseAuth)
+No authorization required
 
 ### HTTP request headers
 
