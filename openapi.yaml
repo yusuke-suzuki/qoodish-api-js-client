@@ -35,6 +35,8 @@ tags:
     description: Manage notifications
   - name: Invites
     description: Manage invites
+  - name: Metadata
+    description: Manage metadata
 servers:
   - url: https://api.qoodish.com
 security:
@@ -1341,6 +1343,78 @@ paths:
           description: Invalid parameter specified.
         401:
           description: Authentication has failed.
+  /maps/{map_id}/metadata:
+    get:
+      tags:
+        - Metadata
+      summary: Get Map metadata
+      description: |
+        Get Map metadata.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        404:
+          description: Resource not found.
+  /reviews/{review_id}/metadata:
+    get:
+      tags:
+        - Metadata
+      summary: Get Review metadata
+      description: |
+        Get Review metadata.
+      parameters:
+        - name: review_id
+          in: path
+          required: true
+          description: A valid Review ID.
+          example: 1
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        404:
+          description: Resource not found.
+  /spots/{place_id}/metadata:
+    get:
+      tags:
+        - Metadata
+      summary: Get Spot metadata
+      description: |
+        Get Spot metadata.
+      parameters:
+        - name: place_id
+          in: path
+          required: true
+          description: A valid Place ID.
+          example: ml8RkRdpmMmn4WY
+          schema:
+            type: string
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        404:
+          description: Resource not found.
 
 components:
   securitySchemes:
@@ -1351,6 +1425,15 @@ components:
       description: |
         A valid id token of firebase user.
   schemas:
+    Metadata:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        image_url:
+          type: string
     NewUser:
       type: object
       description: User info from firebase.
