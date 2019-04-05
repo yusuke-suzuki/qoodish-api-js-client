@@ -46,14 +46,19 @@ export default class MetadataApi {
      * Get Map metadata
      * Get Map metadata. 
      * @param {Number} mapId A valid Map ID.
+     * @param {String} acceptLanguage 
      * @param {module:api/MetadataApi~mapsMapIdMetadataGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Metadata}
      */
-    mapsMapIdMetadataGet(mapId, callback) {
+    mapsMapIdMetadataGet(mapId, acceptLanguage, callback) {
       let postBody = null;
       // verify the required parameter 'mapId' is set
       if (mapId === undefined || mapId === null) {
         throw new Error("Missing the required parameter 'mapId' when calling mapsMapIdMetadataGet");
+      }
+      // verify the required parameter 'acceptLanguage' is set
+      if (acceptLanguage === undefined || acceptLanguage === null) {
+        throw new Error("Missing the required parameter 'acceptLanguage' when calling mapsMapIdMetadataGet");
       }
 
       let pathParams = {
@@ -62,6 +67,7 @@ export default class MetadataApi {
       let queryParams = {
       };
       let headerParams = {
+        'Accept-Language': acceptLanguage
       };
       let formParams = {
       };
@@ -89,14 +95,19 @@ export default class MetadataApi {
      * Get Review metadata
      * Get Review metadata. 
      * @param {Number} reviewId A valid Review ID.
+     * @param {String} acceptLanguage 
      * @param {module:api/MetadataApi~reviewsReviewIdMetadataGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Metadata}
      */
-    reviewsReviewIdMetadataGet(reviewId, callback) {
+    reviewsReviewIdMetadataGet(reviewId, acceptLanguage, callback) {
       let postBody = null;
       // verify the required parameter 'reviewId' is set
       if (reviewId === undefined || reviewId === null) {
         throw new Error("Missing the required parameter 'reviewId' when calling reviewsReviewIdMetadataGet");
+      }
+      // verify the required parameter 'acceptLanguage' is set
+      if (acceptLanguage === undefined || acceptLanguage === null) {
+        throw new Error("Missing the required parameter 'acceptLanguage' when calling reviewsReviewIdMetadataGet");
       }
 
       let pathParams = {
@@ -105,6 +116,7 @@ export default class MetadataApi {
       let queryParams = {
       };
       let headerParams = {
+        'Accept-Language': acceptLanguage
       };
       let formParams = {
       };
@@ -132,14 +144,19 @@ export default class MetadataApi {
      * Get Spot metadata
      * Get Spot metadata. 
      * @param {String} placeId A valid Place ID.
+     * @param {String} acceptLanguage 
      * @param {module:api/MetadataApi~spotsPlaceIdMetadataGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Metadata}
      */
-    spotsPlaceIdMetadataGet(placeId, callback) {
+    spotsPlaceIdMetadataGet(placeId, acceptLanguage, callback) {
       let postBody = null;
       // verify the required parameter 'placeId' is set
       if (placeId === undefined || placeId === null) {
         throw new Error("Missing the required parameter 'placeId' when calling spotsPlaceIdMetadataGet");
+      }
+      // verify the required parameter 'acceptLanguage' is set
+      if (acceptLanguage === undefined || acceptLanguage === null) {
+        throw new Error("Missing the required parameter 'acceptLanguage' when calling spotsPlaceIdMetadataGet");
       }
 
       let pathParams = {
@@ -148,6 +165,7 @@ export default class MetadataApi {
       let queryParams = {
       };
       let headerParams = {
+        'Accept-Language': acceptLanguage
       };
       let formParams = {
       };
