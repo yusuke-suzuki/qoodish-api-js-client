@@ -1,4 +1,4 @@
-# QoodishApi.NewInvite
+# QoodishApiJsClient.NewInvite
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# QoodishApi.ReviewsApi
+# QoodishApiJsClient.ReviewsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -26,15 +26,15 @@ Fetch reviews on map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let mapId = 1; // Number | A valid Map ID.
 let opts = {
   'placeId': ml8RkRdpmMmn4WY // String | A valid Place ID.
@@ -81,17 +81,17 @@ Create a new review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let mapId = 1; // Number | A valid Map ID.
-let newReview = new QoodishApi.NewReview(); // NewReview | 
+let newReview = new QoodishApiJsClient.NewReview(); // NewReview | 
 apiInstance.mapsMapIdReviewsPost(mapId, newReview, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -134,15 +134,15 @@ Fetch a review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let mapId = 1; // Number | A valid Map ID.
 let reviewId = 1; // Number | A valid Review ID.
 apiInstance.mapsMapIdReviewsReviewIdGet(mapId, reviewId, (error, data, response) => {
@@ -187,15 +187,15 @@ Fetch reviews.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let opts = {
   'nextTimestamp': 2019-02-19T08:19:32.000Z, // String | Filter with timestamp.
   'recent': true // Boolean | Filter recent reviews with this option.
@@ -242,15 +242,15 @@ Delete a review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let reviewId = 1; // Number | A valid Review ID.
 apiInstance.reviewsReviewIdDelete(reviewId, (error, data, response) => {
   if (error) {
@@ -293,17 +293,17 @@ Update a review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let reviewId = 1; // Number | A valid Review ID.
-let newReview = new QoodishApi.NewReview(); // NewReview | 
+let newReview = new QoodishApiJsClient.NewReview(); // NewReview | 
 apiInstance.reviewsReviewIdPut(reviewId, newReview, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -346,15 +346,15 @@ Fetch spot reviews.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let placeId = 1; // String | A valid Place ID.
 apiInstance.spotsPlaceIdReviewsGet(placeId, (error, data, response) => {
   if (error) {
@@ -397,15 +397,15 @@ Fetch user reviews.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.ReviewsApi();
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
 let userId = 1; // Number | A valid Map ID.
 let opts = {
   'nextTimestamp': 2019-02-19T08:19:32.000Z // String | Filter with timestamp.

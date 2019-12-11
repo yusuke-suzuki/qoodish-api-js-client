@@ -1,4 +1,4 @@
-# QoodishApi.Like
+# QoodishApiJsClient.Like
 
 ## Properties
 

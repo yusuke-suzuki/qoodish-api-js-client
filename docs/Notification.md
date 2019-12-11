@@ -1,4 +1,4 @@
-# QoodishApi.Notification
+# QoodishApiJsClient.Notification
 
 ## Properties
 

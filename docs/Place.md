@@ -1,4 +1,4 @@
-# QoodishApi.Place
+# QoodishApiJsClient.Place
 
 ## Properties
 

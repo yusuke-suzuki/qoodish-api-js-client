@@ -1,4 +1,4 @@
-# QoodishApi.IssueContentsApi
+# QoodishApiJsClient.IssueContentsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -19,16 +19,16 @@ Issue inappropriate content.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.IssueContentsApi();
-let inappropreateContent = new QoodishApi.InappropreateContent(); // InappropreateContent | 
+let apiInstance = new QoodishApiJsClient.IssueContentsApi();
+let inappropreateContent = new QoodishApiJsClient.InappropreateContent(); // InappropreateContent | 
 apiInstance.inappropriateContentsPost(inappropreateContent, (error, data, response) => {
   if (error) {
     console.error(error);

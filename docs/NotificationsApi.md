@@ -1,4 +1,4 @@
-# QoodishApi.NotificationsApi
+# QoodishApiJsClient.NotificationsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -20,15 +20,15 @@ Fetch recent notifications.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.NotificationsApi();
+let apiInstance = new QoodishApiJsClient.NotificationsApi();
 apiInstance.notificationsGet((error, data, response) => {
   if (error) {
     console.error(error);
@@ -67,18 +67,18 @@ Update notification.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.NotificationsApi();
+let apiInstance = new QoodishApiJsClient.NotificationsApi();
 let notificationId = 1; // Number | A valid Notification ID.
 let opts = {
-  'inlineObject1': new QoodishApi.InlineObject1() // InlineObject1 | 
+  'inlineObject1': new QoodishApiJsClient.InlineObject1() // InlineObject1 | 
 };
 apiInstance.notificationsNotificationIdPut(notificationId, opts, (error, data, response) => {
   if (error) {

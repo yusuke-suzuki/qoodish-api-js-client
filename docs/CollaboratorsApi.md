@@ -1,4 +1,4 @@
-# QoodishApi.CollaboratorsApi
+# QoodishApiJsClient.CollaboratorsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -19,15 +19,15 @@ Fetch collaborators on target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.CollaboratorsApi();
+let apiInstance = new QoodishApiJsClient.CollaboratorsApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdCollaboratorsGet(mapId, (error, data, response) => {
   if (error) {

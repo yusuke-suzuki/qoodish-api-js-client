@@ -1,4 +1,4 @@
-# QoodishApi.MetadataApi
+# QoodishApiJsClient.MetadataApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -21,9 +21,9 @@ Get Map metadata.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
+import QoodishApiJsClient from 'qoodish-api-js-client';
 
-let apiInstance = new QoodishApi.MetadataApi();
+let apiInstance = new QoodishApiJsClient.MetadataApi();
 let mapId = 1; // Number | A valid Map ID.
 let acceptLanguage = ja; // String | 
 apiInstance.mapsMapIdMetadataGet(mapId, acceptLanguage, (error, data, response) => {
@@ -68,9 +68,9 @@ Get Review metadata.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
+import QoodishApiJsClient from 'qoodish-api-js-client';
 
-let apiInstance = new QoodishApi.MetadataApi();
+let apiInstance = new QoodishApiJsClient.MetadataApi();
 let reviewId = 1; // Number | A valid Review ID.
 let acceptLanguage = ja; // String | 
 apiInstance.reviewsReviewIdMetadataGet(reviewId, acceptLanguage, (error, data, response) => {
@@ -115,9 +115,9 @@ Get Spot metadata.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
+import QoodishApiJsClient from 'qoodish-api-js-client';
 
-let apiInstance = new QoodishApi.MetadataApi();
+let apiInstance = new QoodishApiJsClient.MetadataApi();
 let placeId = ml8RkRdpmMmn4WY; // String | A valid Place ID.
 let acceptLanguage = ja; // String | 
 apiInstance.spotsPlaceIdMetadataGet(placeId, acceptLanguage, (error, data, response) => {

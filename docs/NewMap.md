@@ -1,4 +1,4 @@
-# QoodishApi.NewMap
+# QoodishApiJsClient.NewMap
 
 ## Properties
 

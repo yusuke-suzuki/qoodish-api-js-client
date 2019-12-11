@@ -1,4 +1,4 @@
-# QoodishApi.PushNotificationApi
+# QoodishApiJsClient.PushNotificationApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -19,17 +19,17 @@ Update push notification.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.PushNotificationApi();
+let apiInstance = new QoodishApiJsClient.PushNotificationApi();
 let userId = 1; // Number | A valid User ID.
-let pushNotification = new QoodishApi.PushNotification(); // PushNotification | 
+let pushNotification = new QoodishApiJsClient.PushNotification(); // PushNotification | 
 apiInstance.usersUserIdPushNotificationPut(userId, pushNotification, (error, data, response) => {
   if (error) {
     console.error(error);

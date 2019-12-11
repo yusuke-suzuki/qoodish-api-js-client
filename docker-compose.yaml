@@ -12,6 +12,8 @@ services:
       - javascript
       - -o
       - /local
+      - -c
+      - /local/config.json
   validator:
     image: openapitools/openapi-generator-cli:v4.2.2
     volumes:

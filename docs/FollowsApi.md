@@ -1,4 +1,4 @@
-# QoodishApi.FollowsApi
+# QoodishApiJsClient.FollowsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -20,15 +20,15 @@ Unfollow target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.FollowsApi();
+let apiInstance = new QoodishApiJsClient.FollowsApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdFollowDelete(mapId, (error, data, response) => {
   if (error) {
@@ -71,15 +71,15 @@ Follow target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.FollowsApi();
+let apiInstance = new QoodishApiJsClient.FollowsApi();
 let mapId = 1; // Number | A valid Map ID.
 let opts = {
   'inviteId': 1 // String | Follow from invite.

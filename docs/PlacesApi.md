@@ -1,4 +1,4 @@
-# QoodishApi.PlacesApi
+# QoodishApiJsClient.PlacesApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -19,15 +19,15 @@ Fetch places.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.PlacesApi();
+let apiInstance = new QoodishApiJsClient.PlacesApi();
 let opts = {
   'input': 弘前, // String | Filter places with input text.
   'lat': 35.7210375, // String | Search near by places.

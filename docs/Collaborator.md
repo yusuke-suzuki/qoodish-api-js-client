@@ -1,4 +1,4 @@
-# QoodishApi.Collaborator
+# QoodishApiJsClient.Collaborator
 
 ## Properties
 
