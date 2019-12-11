@@ -16,8 +16,9 @@ Method | HTTP request | Description
 [**usersUserIdLikesGet**](LikesApi.md#usersUserIdLikesGet) | **GET** /users/{user_id}/likes | Fetch user likes
 
 
-<a name="mapsMapIdLikeDelete"></a>
-# **mapsMapIdLikeDelete**
+
+## mapsMapIdLikeDelete
+
 > MapDetail mapsMapIdLikeDelete(mapId)
 
 Unlike map
@@ -25,6 +26,7 @@ Unlike map
 Unlike target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -47,6 +49,7 @@ apiInstance.mapsMapIdLikeDelete(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -61,11 +64,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdLikePost"></a>
-# **mapsMapIdLikePost**
+
+## mapsMapIdLikePost
+
 > MapDetail mapsMapIdLikePost(mapId)
 
 Like map
@@ -73,6 +77,7 @@ Like map
 Like target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -95,6 +100,7 @@ apiInstance.mapsMapIdLikePost(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -109,11 +115,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdLikesGet"></a>
-# **mapsMapIdLikesGet**
+
+## mapsMapIdLikesGet
+
 > [Like] mapsMapIdLikesGet(mapId)
 
 Fetch map likes
@@ -121,6 +128,7 @@ Fetch map likes
 Fetch likes on Map
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -143,6 +151,7 @@ apiInstance.mapsMapIdLikesGet(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -157,11 +166,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsCommentIdLikeDelete"></a>
-# **reviewsReviewIdCommentsCommentIdLikeDelete**
+
+## reviewsReviewIdCommentsCommentIdLikeDelete
+
 > Review reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId)
 
 Unlike review comment
@@ -169,6 +179,7 @@ Unlike review comment
 Unlike target review comment. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -192,6 +203,7 @@ apiInstance.reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId, (err
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -207,11 +219,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsCommentIdLikePost"></a>
-# **reviewsReviewIdCommentsCommentIdLikePost**
+
+## reviewsReviewIdCommentsCommentIdLikePost
+
 > Review reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId)
 
 Like review comment
@@ -219,6 +232,7 @@ Like review comment
 Like target review comment. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -242,6 +256,7 @@ apiInstance.reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId, (error
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -257,11 +272,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsCommentIdLikesGet"></a>
-# **reviewsReviewIdCommentsCommentIdLikesGet**
+
+## reviewsReviewIdCommentsCommentIdLikesGet
+
 > [Like] reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId)
 
 Fetch comment likes
@@ -269,6 +285,7 @@ Fetch comment likes
 Fetch comment likes. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -292,6 +309,7 @@ apiInstance.reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId, (error
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -307,11 +325,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdLikeDelete"></a>
-# **reviewsReviewIdLikeDelete**
+
+## reviewsReviewIdLikeDelete
+
 > Review reviewsReviewIdLikeDelete(reviewId)
 
 Unlike review
@@ -319,6 +338,7 @@ Unlike review
 Unlike target review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -341,6 +361,7 @@ apiInstance.reviewsReviewIdLikeDelete(reviewId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -355,11 +376,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdLikePost"></a>
-# **reviewsReviewIdLikePost**
+
+## reviewsReviewIdLikePost
+
 > Review reviewsReviewIdLikePost(reviewId)
 
 Like review
@@ -367,6 +389,7 @@ Like review
 Like target review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -389,6 +412,7 @@ apiInstance.reviewsReviewIdLikePost(reviewId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -403,11 +427,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdLikesGet"></a>
-# **reviewsReviewIdLikesGet**
+
+## reviewsReviewIdLikesGet
+
 > [Like] reviewsReviewIdLikesGet(reviewId)
 
 Fetch review likes
@@ -415,6 +440,7 @@ Fetch review likes
 Fetch likes on Review
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -437,6 +463,7 @@ apiInstance.reviewsReviewIdLikesGet(reviewId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -451,11 +478,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersUserIdLikesGet"></a>
-# **usersUserIdLikesGet**
+
+## usersUserIdLikesGet
+
 > [Like] usersUserIdLikesGet(userId)
 
 Fetch user likes
@@ -463,6 +491,7 @@ Fetch user likes
 Fetch likes by User
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -485,6 +514,7 @@ apiInstance.usersUserIdLikesGet(userId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -499,6 +529,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

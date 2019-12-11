@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**mapsMapIdFollowPost**](FollowsApi.md#mapsMapIdFollowPost) | **POST** /maps/{map_id}/follow | Follow map
 
 
-<a name="mapsMapIdFollowDelete"></a>
-# **mapsMapIdFollowDelete**
+
+## mapsMapIdFollowDelete
+
 > MapDetail mapsMapIdFollowDelete(mapId)
 
 Unfollow map
@@ -17,6 +18,7 @@ Unfollow map
 Unfollow target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -39,6 +41,7 @@ apiInstance.mapsMapIdFollowDelete(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -53,11 +56,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdFollowPost"></a>
-# **mapsMapIdFollowPost**
+
+## mapsMapIdFollowPost
+
 > MapDetail mapsMapIdFollowPost(mapId, opts)
 
 Follow map
@@ -65,6 +69,7 @@ Follow map
 Follow target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -90,6 +95,7 @@ apiInstance.mapsMapIdFollowPost(mapId, opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -105,6 +111,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

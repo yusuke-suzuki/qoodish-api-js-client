@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**devicesRegistrationTokenPut**](DevicesApi.md#devicesRegistrationTokenPut) | **PUT** /devices/{registration_token} | Register device
 
 
-<a name="devicesRegistrationTokenDelete"></a>
-# **devicesRegistrationTokenDelete**
+
+## devicesRegistrationTokenDelete
+
 > devicesRegistrationTokenDelete(registrationToken)
 
 Delete device
@@ -17,6 +18,7 @@ Delete device
 Delete device with registration token.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -39,6 +41,7 @@ apiInstance.devicesRegistrationTokenDelete(registrationToken, (error, data, resp
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **registrationToken** | **String**| A valid registration token. | 
@@ -53,11 +56,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="devicesRegistrationTokenPut"></a>
-# **devicesRegistrationTokenPut**
+
+## devicesRegistrationTokenPut
+
 > devicesRegistrationTokenPut(registrationToken)
 
 Register device
@@ -65,6 +69,7 @@ Register device
 Register device with registration token.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -87,6 +92,7 @@ apiInstance.devicesRegistrationTokenPut(registrationToken, (error, data, respons
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **registrationToken** | **String**| A valid registration token. | 
@@ -101,6 +107,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 

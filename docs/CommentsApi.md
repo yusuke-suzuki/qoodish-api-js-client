@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**reviewsReviewIdCommentsPost**](CommentsApi.md#reviewsReviewIdCommentsPost) | **POST** /reviews/{review_id}/comments | Send review comment
 
 
-<a name="reviewsReviewIdCommentsCommentIdDelete"></a>
-# **reviewsReviewIdCommentsCommentIdDelete**
+
+## reviewsReviewIdCommentsCommentIdDelete
+
 > Review reviewsReviewIdCommentsCommentIdDelete(reviewId, commentId)
 
 Delete review comment
@@ -17,6 +18,7 @@ Delete review comment
 Delete review comment. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -40,6 +42,7 @@ apiInstance.reviewsReviewIdCommentsCommentIdDelete(reviewId, commentId, (error, 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -55,11 +58,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdCommentsPost"></a>
-# **reviewsReviewIdCommentsPost**
+
+## reviewsReviewIdCommentsPost
+
 > Review reviewsReviewIdCommentsPost(reviewId, inlineObject)
 
 Send review comment
@@ -67,6 +71,7 @@ Send review comment
 Send review comment. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -90,6 +95,7 @@ apiInstance.reviewsReviewIdCommentsPost(reviewId, inlineObject, (error, data, re
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -105,6 +111,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**mapsMapIdCollaboratorsGet**](CollaboratorsApi.md#mapsMapIdCollaboratorsGet) | **GET** /maps/{map_id}/collaborators | Fetch collaborators
 
 
-<a name="mapsMapIdCollaboratorsGet"></a>
-# **mapsMapIdCollaboratorsGet**
+
+## mapsMapIdCollaboratorsGet
+
 > [Collaborator] mapsMapIdCollaboratorsGet(mapId)
 
 Fetch collaborators
@@ -16,6 +17,7 @@ Fetch collaborators
 Fetch collaborators on target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -38,6 +40,7 @@ apiInstance.mapsMapIdCollaboratorsGet(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -52,6 +55,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

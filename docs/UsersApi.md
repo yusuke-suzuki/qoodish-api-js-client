@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**usersUserIdPut**](UsersApi.md#usersUserIdPut) | **PUT** /users/{user_id} | Update user profile
 
 
-<a name="usersGet"></a>
-# **usersGet**
+
+## usersGet
+
 > [CurrentUser] usersGet(opts)
 
 Search users
@@ -20,6 +21,7 @@ Search users
 Search users with input text.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -44,6 +46,7 @@ apiInstance.usersGet(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **input** | **String**| Search users with user name. | [optional] 
@@ -58,11 +61,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersPost"></a>
-# **usersPost**
+
+## usersPost
+
 > CurrentUser usersPost(newUser)
 
 Sign in
@@ -70,6 +74,7 @@ Sign in
 Sign in and get profile of current user.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -92,6 +97,7 @@ apiInstance.usersPost(newUser, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **newUser** | [**NewUser**](NewUser.md)|  | 
@@ -106,11 +112,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="usersUserIdDelete"></a>
-# **usersUserIdDelete**
+
+## usersUserIdDelete
+
 > usersUserIdDelete(userId)
 
 Delete user account
@@ -118,6 +125,7 @@ Delete user account
 Delete user account.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -140,6 +148,7 @@ apiInstance.usersUserIdDelete(userId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -154,11 +163,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="usersUserIdGet"></a>
-# **usersUserIdGet**
+
+## usersUserIdGet
+
 > CurrentUser usersUserIdGet(userId)
 
 Get user profile
@@ -166,6 +176,7 @@ Get user profile
 Get profile of target user.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -188,6 +199,7 @@ apiInstance.usersUserIdGet(userId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -202,11 +214,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersUserIdPut"></a>
-# **usersUserIdPut**
+
+## usersUserIdPut
+
 > CurrentUser usersUserIdPut(userId, newUser)
 
 Update user profile
@@ -214,6 +227,7 @@ Update user profile
 Update user profile.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -237,6 +251,7 @@ apiInstance.usersUserIdPut(userId, newUser, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -252,6 +267,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

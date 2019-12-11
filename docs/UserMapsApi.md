@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**usersUserIdMapsGet**](UserMapsApi.md#usersUserIdMapsGet) | **GET** /users/{user_id}/maps | Fetch user Maps
 
 
-<a name="usersUserIdMapsGet"></a>
-# **usersUserIdMapsGet**
+
+## usersUserIdMapsGet
+
 > [MapDetail] usersUserIdMapsGet(userId, opts)
 
 Fetch user Maps
@@ -16,6 +17,7 @@ Fetch user Maps
 Fetch user created Maps. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -41,6 +43,7 @@ apiInstance.usersUserIdMapsGet(userId, opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -56,6 +59,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

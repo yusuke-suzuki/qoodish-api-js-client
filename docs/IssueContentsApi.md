@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**inappropriateContentsPost**](IssueContentsApi.md#inappropriateContentsPost) | **POST** /inappropriate_contents | Issue inappropriate content
 
 
-<a name="inappropriateContentsPost"></a>
-# **inappropriateContentsPost**
+
+## inappropriateContentsPost
+
 > inappropriateContentsPost(inappropreateContent)
 
 Issue inappropriate content
@@ -16,6 +17,7 @@ Issue inappropriate content
 Issue inappropriate content. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -38,6 +40,7 @@ apiInstance.inappropriateContentsPost(inappropreateContent, (error, data, respon
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inappropreateContent** | [**InappropreateContent**](InappropreateContent.md)|  | 
@@ -52,6 +55,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 

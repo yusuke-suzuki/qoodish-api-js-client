@@ -9,8 +9,9 @@ Method | HTTP request | Description
 [**spotsPlaceIdGet**](SpotsApi.md#spotsPlaceIdGet) | **GET** /spots/{place_id} | Fetch a spot
 
 
-<a name="mapsMapIdSpotsGet"></a>
-# **mapsMapIdSpotsGet**
+
+## mapsMapIdSpotsGet
+
 > [Spot] mapsMapIdSpotsGet(mapId)
 
 Fetch spots on map
@@ -18,6 +19,7 @@ Fetch spots on map
 Fetch spots on target map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -40,6 +42,7 @@ apiInstance.mapsMapIdSpotsGet(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -54,11 +57,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="spotsGet"></a>
-# **spotsGet**
+
+## spotsGet
+
 > [Spot] spotsGet(opts)
 
 Fetch spots
@@ -66,6 +70,7 @@ Fetch spots
 Fetch spots. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -90,6 +95,7 @@ apiInstance.spotsGet(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **popular** | **Boolean**| Filter popular spots with this option. | [optional] 
@@ -104,11 +110,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="spotsPlaceIdGet"></a>
-# **spotsPlaceIdGet**
+
+## spotsPlaceIdGet
+
 > Spot spotsPlaceIdGet(placeId)
 
 Fetch a spot
@@ -116,6 +123,7 @@ Fetch a spot
 Fetch a spot. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -138,6 +146,7 @@ apiInstance.spotsPlaceIdGet(placeId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **placeId** | **String**| A valid Place ID. | 
@@ -152,6 +161,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
