@@ -1,6 +1,7 @@
 # QoodishApi.PushNotification
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **followed** | **Boolean** |  | [optional] 

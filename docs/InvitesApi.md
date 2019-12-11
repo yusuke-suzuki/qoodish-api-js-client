@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**mapsMapIdInvitesPost**](InvitesApi.md#mapsMapIdInvitesPost) | **POST** /maps/{map_id}/invites | Send invite
 
 
-<a name="invitesGet"></a>
-# **invitesGet**
+
+## invitesGet
+
 > [Invite] invitesGet()
 
 Fetch invites
@@ -17,6 +18,7 @@ Fetch invites
 Fetch invites for Map.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -37,6 +39,7 @@ apiInstance.invitesGet((error, data, response) => {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -49,11 +52,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdInvitesPost"></a>
-# **mapsMapIdInvitesPost**
+
+## mapsMapIdInvitesPost
+
 > mapsMapIdInvitesPost(mapId, newInvite)
 
 Send invite
@@ -61,6 +65,7 @@ Send invite
 Send invites for Map to User.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -84,6 +89,7 @@ apiInstance.mapsMapIdInvitesPost(mapId, newInvite, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -99,6 +105,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 

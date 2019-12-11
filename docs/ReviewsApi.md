@@ -14,8 +14,9 @@ Method | HTTP request | Description
 [**usersUserIdReviewsGet**](ReviewsApi.md#usersUserIdReviewsGet) | **GET** /users/{user_id}/reviews | Fetch user reviews
 
 
-<a name="mapsMapIdReviewsGet"></a>
-# **mapsMapIdReviewsGet**
+
+## mapsMapIdReviewsGet
+
 > [Review] mapsMapIdReviewsGet(mapId, opts)
 
 Fetch map reviews
@@ -23,6 +24,7 @@ Fetch map reviews
 Fetch reviews on map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -48,6 +50,7 @@ apiInstance.mapsMapIdReviewsGet(mapId, opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -63,11 +66,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdReviewsPost"></a>
-# **mapsMapIdReviewsPost**
+
+## mapsMapIdReviewsPost
+
 > Review mapsMapIdReviewsPost(mapId, newReview)
 
 Create review
@@ -75,6 +79,7 @@ Create review
 Create a new review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -98,6 +103,7 @@ apiInstance.mapsMapIdReviewsPost(mapId, newReview, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -113,11 +119,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="mapsMapIdReviewsReviewIdGet"></a>
-# **mapsMapIdReviewsReviewIdGet**
+
+## mapsMapIdReviewsReviewIdGet
+
 > Review mapsMapIdReviewsReviewIdGet(mapId, reviewId)
 
 Fetch review
@@ -125,6 +132,7 @@ Fetch review
 Fetch a review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -148,6 +156,7 @@ apiInstance.mapsMapIdReviewsReviewIdGet(mapId, reviewId, (error, data, response)
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -163,11 +172,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsGet"></a>
-# **reviewsGet**
+
+## reviewsGet
+
 > [Review] reviewsGet(opts)
 
 Fetch reviews
@@ -175,6 +185,7 @@ Fetch reviews
 Fetch reviews. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -200,6 +211,7 @@ apiInstance.reviewsGet(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nextTimestamp** | **String**| Filter with timestamp. | [optional] 
@@ -215,11 +227,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdDelete"></a>
-# **reviewsReviewIdDelete**
+
+## reviewsReviewIdDelete
+
 > reviewsReviewIdDelete(reviewId)
 
 Delete review
@@ -227,6 +240,7 @@ Delete review
 Delete a review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -249,6 +263,7 @@ apiInstance.reviewsReviewIdDelete(reviewId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -263,11 +278,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="reviewsReviewIdPut"></a>
-# **reviewsReviewIdPut**
+
+## reviewsReviewIdPut
+
 > Review reviewsReviewIdPut(reviewId, newReview)
 
 Update review
@@ -275,6 +291,7 @@ Update review
 Update a review. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -298,6 +315,7 @@ apiInstance.reviewsReviewIdPut(reviewId, newReview, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -313,11 +331,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="spotsPlaceIdReviewsGet"></a>
-# **spotsPlaceIdReviewsGet**
+
+## spotsPlaceIdReviewsGet
+
 > [Review] spotsPlaceIdReviewsGet(placeId)
 
 Fetch spot reviews
@@ -325,6 +344,7 @@ Fetch spot reviews
 Fetch spot reviews. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -347,6 +367,7 @@ apiInstance.spotsPlaceIdReviewsGet(placeId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **placeId** | **String**| A valid Place ID. | 
@@ -361,11 +382,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersUserIdReviewsGet"></a>
-# **usersUserIdReviewsGet**
+
+## usersUserIdReviewsGet
+
 > [Review] usersUserIdReviewsGet(userId, opts)
 
 Fetch user reviews
@@ -373,6 +395,7 @@ Fetch user reviews
 Fetch user reviews. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -398,6 +421,7 @@ apiInstance.usersUserIdReviewsGet(userId, opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid Map ID. | 
@@ -413,6 +437,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

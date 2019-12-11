@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**mapsPost**](MapsApi.md#mapsPost) | **POST** /maps | Create a new Map
 
 
-<a name="mapsGet"></a>
-# **mapsGet**
+
+## mapsGet
+
 > [MapDetail] mapsGet(opts)
 
 List Maps
@@ -20,6 +21,7 @@ List Maps
 List Maps. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -49,6 +51,7 @@ apiInstance.mapsGet(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | **Boolean**| Filter active maps with this option. | [optional] 
@@ -68,11 +71,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdDelete"></a>
-# **mapsMapIdDelete**
+
+## mapsMapIdDelete
+
 > mapsMapIdDelete(mapId)
 
 Delete a Map
@@ -80,6 +84,7 @@ Delete a Map
 Delete a Map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -102,6 +107,7 @@ apiInstance.mapsMapIdDelete(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -116,11 +122,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="mapsMapIdGet"></a>
-# **mapsMapIdGet**
+
+## mapsMapIdGet
+
 > MapDetail mapsMapIdGet(mapId)
 
 Get Map detail
@@ -128,6 +135,7 @@ Get Map detail
 Get Map detail. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -150,6 +158,7 @@ apiInstance.mapsMapIdGet(mapId, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -164,11 +173,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mapsMapIdPut"></a>
-# **mapsMapIdPut**
+
+## mapsMapIdPut
+
 > MapDetail mapsMapIdPut(mapId, newMap)
 
 Update a Map
@@ -176,6 +186,7 @@ Update a Map
 Update a new Map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -199,6 +210,7 @@ apiInstance.mapsMapIdPut(mapId, newMap, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -214,11 +226,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="mapsPost"></a>
-# **mapsPost**
+
+## mapsPost
+
 > MapDetail mapsPost(newMap)
 
 Create a new Map
@@ -226,6 +239,7 @@ Create a new Map
 Create a new Map. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -248,6 +262,7 @@ apiInstance.mapsPost(newMap, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **newMap** | [**NewMap**](NewMap.md)|  | 
@@ -262,6 +277,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -9,8 +9,9 @@ Method | HTTP request | Description
 [**spotsPlaceIdMetadataGet**](MetadataApi.md#spotsPlaceIdMetadataGet) | **GET** /spots/{place_id}/metadata | Get Spot metadata
 
 
-<a name="mapsMapIdMetadataGet"></a>
-# **mapsMapIdMetadataGet**
+
+## mapsMapIdMetadataGet
+
 > Metadata mapsMapIdMetadataGet(mapId, acceptLanguage)
 
 Get Map metadata
@@ -18,6 +19,7 @@ Get Map metadata
 Get Map metadata. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 
@@ -35,6 +37,7 @@ apiInstance.mapsMapIdMetadataGet(mapId, acceptLanguage, (error, data, response) 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapId** | **Number**| A valid Map ID. | 
@@ -50,11 +53,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reviewsReviewIdMetadataGet"></a>
-# **reviewsReviewIdMetadataGet**
+
+## reviewsReviewIdMetadataGet
+
 > Metadata reviewsReviewIdMetadataGet(reviewId, acceptLanguage)
 
 Get Review metadata
@@ -62,6 +66,7 @@ Get Review metadata
 Get Review metadata. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 
@@ -79,6 +84,7 @@ apiInstance.reviewsReviewIdMetadataGet(reviewId, acceptLanguage, (error, data, r
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reviewId** | **Number**| A valid Review ID. | 
@@ -94,11 +100,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="spotsPlaceIdMetadataGet"></a>
-# **spotsPlaceIdMetadataGet**
+
+## spotsPlaceIdMetadataGet
+
 > Metadata spotsPlaceIdMetadataGet(placeId, acceptLanguage)
 
 Get Spot metadata
@@ -106,6 +113,7 @@ Get Spot metadata
 Get Spot metadata. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 
@@ -123,6 +131,7 @@ apiInstance.spotsPlaceIdMetadataGet(placeId, acceptLanguage, (error, data, respo
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **placeId** | **String**| A valid Place ID. | 
@@ -138,6 +147,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

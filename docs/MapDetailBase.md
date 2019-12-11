@@ -1,6 +1,7 @@
 # QoodishApi.MapDetailBase
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **placeId** | **String** |  | [optional] 

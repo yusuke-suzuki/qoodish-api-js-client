@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**notificationsNotificationIdPut**](NotificationsApi.md#notificationsNotificationIdPut) | **PUT** /notifications/{notification_id} | Update notification
 
 
-<a name="notificationsGet"></a>
-# **notificationsGet**
+
+## notificationsGet
+
 > [Notification] notificationsGet()
 
 Fetch notifications
@@ -17,6 +18,7 @@ Fetch notifications
 Fetch recent notifications.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -37,6 +39,7 @@ apiInstance.notificationsGet((error, data, response) => {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -49,11 +52,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="notificationsNotificationIdPut"></a>
-# **notificationsNotificationIdPut**
+
+## notificationsNotificationIdPut
+
 > Notification notificationsNotificationIdPut(notificationId, opts)
 
 Update notification
@@ -61,6 +65,7 @@ Update notification
 Update notification.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -86,6 +91,7 @@ apiInstance.notificationsNotificationIdPut(notificationId, opts, (error, data, r
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **notificationId** | **Number**| A valid Notification ID. | 
@@ -101,6 +107,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

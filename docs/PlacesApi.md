@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**placesGet**](PlacesApi.md#placesGet) | **GET** /places | Fetch places
 
 
-<a name="placesGet"></a>
-# **placesGet**
+
+## placesGet
+
 > [Place] placesGet(opts)
 
 Fetch places
@@ -16,6 +17,7 @@ Fetch places
 Fetch places. 
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -42,6 +44,7 @@ apiInstance.placesGet(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **input** | **String**| Filter places with input text. | [optional] 
@@ -58,6 +61,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

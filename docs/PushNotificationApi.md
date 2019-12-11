@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**usersUserIdPushNotificationPut**](PushNotificationApi.md#usersUserIdPushNotificationPut) | **PUT** /users/{user_id}/push_notification | Update push notification
 
 
-<a name="usersUserIdPushNotificationPut"></a>
-# **usersUserIdPushNotificationPut**
+
+## usersUserIdPushNotificationPut
+
 > CurrentUser usersUserIdPushNotificationPut(userId, pushNotification)
 
 Update push notification
@@ -16,6 +17,7 @@ Update push notification
 Update push notification.
 
 ### Example
+
 ```javascript
 import QoodishApi from 'qoodish_api';
 let defaultClient = QoodishApi.ApiClient.instance;
@@ -39,6 +41,7 @@ apiInstance.usersUserIdPushNotificationPut(userId, pushNotification, (error, dat
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Number**| A valid User ID. | 
@@ -54,6 +57,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
