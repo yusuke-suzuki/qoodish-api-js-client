@@ -24,7 +24,7 @@ jobs:
           scope: "@yusuke-suzuki"
       - run: yarn
       - run: yarn build
-      - run: yarn publish
+      - run: yarn publish --access=public --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NODE_ENV: production
