@@ -28,7 +28,7 @@ Unlike target map.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -79,7 +79,7 @@ Like target map.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -130,7 +130,7 @@ Fetch likes on Map
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -181,7 +181,7 @@ Unlike target review comment.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -234,7 +234,7 @@ Like target review comment.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -287,7 +287,7 @@ Fetch comment likes.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -340,7 +340,7 @@ Unlike target review.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -391,7 +391,7 @@ Like target review.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -442,7 +442,7 @@ Fetch likes on Review
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
@@ -493,7 +493,7 @@ Fetch likes by User
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];

@@ -19,7 +19,7 @@ Issue inappropriate content.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
