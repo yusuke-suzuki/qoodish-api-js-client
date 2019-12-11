@@ -1,4 +1,4 @@
-# QoodishApi.SpotsApi
+# QoodishApiJsClient.SpotsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -21,15 +21,15 @@ Fetch spots on target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.SpotsApi();
+let apiInstance = new QoodishApiJsClient.SpotsApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdSpotsGet(mapId, (error, data, response) => {
   if (error) {
@@ -72,15 +72,15 @@ Fetch spots.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.SpotsApi();
+let apiInstance = new QoodishApiJsClient.SpotsApi();
 let opts = {
   'popular': true // Boolean | Filter popular spots with this option.
 };
@@ -125,15 +125,15 @@ Fetch a spot.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.SpotsApi();
+let apiInstance = new QoodishApiJsClient.SpotsApi();
 let placeId = ChIJMxRrvBb-ml8RkRdpmMmn4WY; // String | A valid Place ID.
 apiInstance.spotsPlaceIdGet(placeId, (error, data, response) => {
   if (error) {

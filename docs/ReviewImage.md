@@ -1,4 +1,4 @@
-# QoodishApi.ReviewImage
+# QoodishApiJsClient.ReviewImage
 
 ## Properties
 

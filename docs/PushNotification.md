@@ -1,4 +1,4 @@
-# QoodishApi.PushNotification
+# QoodishApiJsClient.PushNotification
 
 ## Properties
 

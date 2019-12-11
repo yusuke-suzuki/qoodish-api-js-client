@@ -1,4 +1,4 @@
-# QoodishApi.ReviewMap
+# QoodishApiJsClient.ReviewMap
 
 ## Properties
 

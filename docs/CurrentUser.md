@@ -1,4 +1,4 @@
-# QoodishApi.CurrentUser
+# QoodishApiJsClient.CurrentUser
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# QoodishApi.UsersApi
+# QoodishApiJsClient.UsersApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -23,15 +23,15 @@ Search users with input text.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.UsersApi();
+let apiInstance = new QoodishApiJsClient.UsersApi();
 let opts = {
   'input': username // String | Search users with user name.
 };
@@ -76,16 +76,16 @@ Sign in and get profile of current user.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.UsersApi();
-let newUser = new QoodishApi.NewUser(); // NewUser | 
+let apiInstance = new QoodishApiJsClient.UsersApi();
+let newUser = new QoodishApiJsClient.NewUser(); // NewUser | 
 apiInstance.usersPost(newUser, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -127,15 +127,15 @@ Delete user account.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.UsersApi();
+let apiInstance = new QoodishApiJsClient.UsersApi();
 let userId = 1; // Number | A valid User ID.
 apiInstance.usersUserIdDelete(userId, (error, data, response) => {
   if (error) {
@@ -178,15 +178,15 @@ Get profile of target user.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.UsersApi();
+let apiInstance = new QoodishApiJsClient.UsersApi();
 let userId = 1; // Number | A valid User ID.
 apiInstance.usersUserIdGet(userId, (error, data, response) => {
   if (error) {
@@ -229,17 +229,17 @@ Update user profile.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.UsersApi();
+let apiInstance = new QoodishApiJsClient.UsersApi();
 let userId = 1; // Number | A valid User ID.
-let newUser = new QoodishApi.NewUser(); // NewUser | 
+let newUser = new QoodishApiJsClient.NewUser(); // NewUser | 
 apiInstance.usersUserIdPut(userId, newUser, (error, data, response) => {
   if (error) {
     console.error(error);

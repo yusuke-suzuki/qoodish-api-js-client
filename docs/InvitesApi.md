@@ -1,4 +1,4 @@
-# QoodishApi.InvitesApi
+# QoodishApiJsClient.InvitesApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -20,15 +20,15 @@ Fetch invites for Map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.InvitesApi();
+let apiInstance = new QoodishApiJsClient.InvitesApi();
 apiInstance.invitesGet((error, data, response) => {
   if (error) {
     console.error(error);
@@ -67,17 +67,17 @@ Send invites for Map to User.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.InvitesApi();
+let apiInstance = new QoodishApiJsClient.InvitesApi();
 let mapId = 1; // Number | A valid Map ID.
-let newInvite = new QoodishApi.NewInvite(); // NewInvite | 
+let newInvite = new QoodishApiJsClient.NewInvite(); // NewInvite | 
 apiInstance.mapsMapIdInvitesPost(mapId, newInvite, (error, data, response) => {
   if (error) {
     console.error(error);

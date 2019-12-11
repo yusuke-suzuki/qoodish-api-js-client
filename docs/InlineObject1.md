@@ -1,4 +1,4 @@
-# QoodishApi.InlineObject1
+# QoodishApiJsClient.InlineObject1
 
 ## Properties
 

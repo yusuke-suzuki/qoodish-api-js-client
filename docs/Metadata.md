@@ -1,4 +1,4 @@
-# QoodishApi.Metadata
+# QoodishApiJsClient.Metadata
 
 ## Properties
 

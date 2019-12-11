@@ -1,4 +1,4 @@
-# QoodishApi.MapsApi
+# QoodishApiJsClient.MapsApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -23,15 +23,15 @@ List Maps.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
+let apiInstance = new QoodishApiJsClient.MapsApi();
 let opts = {
   'active': true, // Boolean | Filter active maps with this option.
   'recommend': true, // Boolean | Filter recommend maps with this option.
@@ -86,15 +86,15 @@ Delete a Map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
+let apiInstance = new QoodishApiJsClient.MapsApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdDelete(mapId, (error, data, response) => {
   if (error) {
@@ -137,15 +137,15 @@ Get Map detail.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
+let apiInstance = new QoodishApiJsClient.MapsApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdGet(mapId, (error, data, response) => {
   if (error) {
@@ -188,17 +188,17 @@ Update a new Map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
+let apiInstance = new QoodishApiJsClient.MapsApi();
 let mapId = 1; // Number | A valid Map ID.
-let newMap = new QoodishApi.NewMap(); // NewMap | 
+let newMap = new QoodishApiJsClient.NewMap(); // NewMap | 
 apiInstance.mapsMapIdPut(mapId, newMap, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -241,16 +241,16 @@ Create a new Map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.MapsApi();
-let newMap = new QoodishApi.NewMap(); // NewMap | 
+let apiInstance = new QoodishApiJsClient.MapsApi();
+let newMap = new QoodishApiJsClient.NewMap(); // NewMap | 
 apiInstance.mapsPost(newMap, (error, data, response) => {
   if (error) {
     console.error(error);

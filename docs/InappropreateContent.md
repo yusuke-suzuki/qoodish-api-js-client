@@ -1,4 +1,4 @@
-# QoodishApi.InappropreateContent
+# QoodishApiJsClient.InappropreateContent
 
 ## Properties
 

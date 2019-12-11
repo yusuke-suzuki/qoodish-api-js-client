@@ -1,4 +1,4 @@
-# QoodishApi.DevicesApi
+# QoodishApiJsClient.DevicesApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -20,15 +20,15 @@ Delete device with registration token.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.DevicesApi();
+let apiInstance = new QoodishApiJsClient.DevicesApi();
 let registrationToken = 12345abcdef; // String | A valid registration token.
 apiInstance.devicesRegistrationTokenDelete(registrationToken, (error, data, response) => {
   if (error) {
@@ -71,15 +71,15 @@ Register device with registration token.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.DevicesApi();
+let apiInstance = new QoodishApiJsClient.DevicesApi();
 let registrationToken = 12345abcdef; // String | A valid registration token.
 apiInstance.devicesRegistrationTokenPut(registrationToken, (error, data, response) => {
   if (error) {

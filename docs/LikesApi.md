@@ -1,4 +1,4 @@
-# QoodishApi.LikesApi
+# QoodishApiJsClient.LikesApi
 
 All URIs are relative to *https://api.qoodish.com*
 
@@ -28,15 +28,15 @@ Unlike target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdLikeDelete(mapId, (error, data, response) => {
   if (error) {
@@ -79,15 +79,15 @@ Like target map.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdLikePost(mapId, (error, data, response) => {
   if (error) {
@@ -130,15 +130,15 @@ Fetch likes on Map
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let mapId = 1; // Number | A valid Map ID.
 apiInstance.mapsMapIdLikesGet(mapId, (error, data, response) => {
   if (error) {
@@ -181,15 +181,15 @@ Unlike target review comment.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 let commentId = 1; // Number | A valid Comment ID.
 apiInstance.reviewsReviewIdCommentsCommentIdLikeDelete(reviewId, commentId, (error, data, response) => {
@@ -234,15 +234,15 @@ Like target review comment.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 let commentId = 1; // Number | A valid Comment ID.
 apiInstance.reviewsReviewIdCommentsCommentIdLikePost(reviewId, commentId, (error, data, response) => {
@@ -287,15 +287,15 @@ Fetch comment likes.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 let commentId = 1; // Number | A valid Comment ID.
 apiInstance.reviewsReviewIdCommentsCommentIdLikesGet(reviewId, commentId, (error, data, response) => {
@@ -340,15 +340,15 @@ Unlike target review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 apiInstance.reviewsReviewIdLikeDelete(reviewId, (error, data, response) => {
   if (error) {
@@ -391,15 +391,15 @@ Like target review.
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 apiInstance.reviewsReviewIdLikePost(reviewId, (error, data, response) => {
   if (error) {
@@ -442,15 +442,15 @@ Fetch likes on Review
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let reviewId = 1; // Number | A valid Review ID.
 apiInstance.reviewsReviewIdLikesGet(reviewId, (error, data, response) => {
   if (error) {
@@ -493,15 +493,15 @@ Fetch likes by User
 ### Example
 
 ```javascript
-import QoodishApi from 'qoodish_api';
-let defaultClient = QoodishApi.ApiClient.instance;
+import QoodishApiJsClient from 'qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
 // Configure API key authorization: firebaseAuth
 let firebaseAuth = defaultClient.authentications['firebaseAuth'];
 firebaseAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //firebaseAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new QoodishApi.LikesApi();
+let apiInstance = new QoodishApiJsClient.LikesApi();
 let userId = 1; // Number | A valid User ID.
 apiInstance.usersUserIdLikesGet(userId, (error, data, response) => {
   if (error) {

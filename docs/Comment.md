@@ -1,4 +1,4 @@
-# QoodishApi.Comment
+# QoodishApiJsClient.Comment
 
 ## Properties
 

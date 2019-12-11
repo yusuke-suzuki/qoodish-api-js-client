@@ -1,4 +1,4 @@
-# QoodishApi.MapDetailBase
+# QoodishApiJsClient.MapDetailBase
 
 ## Properties
 
