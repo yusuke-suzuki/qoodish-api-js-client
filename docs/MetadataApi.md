@@ -21,7 +21,7 @@ Get Map metadata.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 
 let apiInstance = new QoodishApiJsClient.MetadataApi();
 let mapId = 1; // Number | A valid Map ID.
@@ -68,7 +68,7 @@ Get Review metadata.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 
 let apiInstance = new QoodishApiJsClient.MetadataApi();
 let reviewId = 1; // Number | A valid Review ID.
@@ -115,7 +115,7 @@ Get Spot metadata.
 ### Example
 
 ```javascript
-import QoodishApiJsClient from 'qoodish-api-js-client';
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
 
 let apiInstance = new QoodishApiJsClient.MetadataApi();
 let placeId = ml8RkRdpmMmn4WY; // String | A valid Place ID.
