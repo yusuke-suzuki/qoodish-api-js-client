@@ -1,6 +1,6 @@
 {
   "name": "qoodish-api-js-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Qoodih_API_",
   "license": "Unlicense",
   "main": "dist/index.js",

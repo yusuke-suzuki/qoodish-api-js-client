@@ -26,5 +26,5 @@ jobs:
       - run: yarn build
       - run: yarn publish --access=public --non-interactive
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
           NODE_ENV: production
