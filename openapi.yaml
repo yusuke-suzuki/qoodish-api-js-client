@@ -3,7 +3,7 @@ info:
   title: Qoodish API
   description: |
     Qoodish API JavaScript Client.
-  version: 0.0.1
+  version: 0.1.0
 tags:
   - name: Users
     description: Manage user resources.
