@@ -2,8 +2,8 @@ openapi: 3.0.0
 info:
   title: Qoodish API
   description: |
-    Qoodih API.
-  version: 0.0.1
+    Qoodish API JavaScript Client.
+  version: 0.1.0
 tags:
   - name: Users
     description: Manage user resources.
