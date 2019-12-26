@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Qoodish API
   description: |
-    Qoodih API.
+    Qoodish API JavaScript Client.
   version: 0.0.1
 tags:
   - name: Users

@@ -1,6 +1,6 @@
 /**
  * Qoodish API
- * Qoodih API. 
+ * Qoodish API JavaScript Client. 
  *
  * The version of the OpenAPI document: 0.0.1
  * 

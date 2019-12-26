@@ -1,6 +1,6 @@
 /**
  * Qoodish API
- * Qoodih API. 
+ * Qoodish API JavaScript Client. 
  *
  * The version of the OpenAPI document: 0.0.1
  * 
@@ -57,7 +57,7 @@ import UsersApi from './api/UsersApi';
 
 
 /**
-* Qoodih_API_.<br>
+* Qoodish_API_JavaScript_Client_.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
