@@ -51,9 +51,6 @@ class ReviewImage {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('file_name')) {
-                obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
-            }
             if (data.hasOwnProperty('thumbnail_url')) {
                 obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
             }
@@ -68,11 +65,6 @@ class ReviewImage {
  * @member {String} url
  */
 ReviewImage.prototype['url'] = undefined;
-
-/**
- * @member {String} file_name
- */
-ReviewImage.prototype['file_name'] = undefined;
 
 /**
  * @member {String} thumbnail_url

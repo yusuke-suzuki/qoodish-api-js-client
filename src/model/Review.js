@@ -68,8 +68,8 @@ class Review {
             if (data.hasOwnProperty('comments')) {
                 obj['comments'] = ApiClient.convertToType(data['comments'], [Comment]);
             }
-            if (data.hasOwnProperty('image')) {
-                obj['image'] = ReviewImage.constructFromObject(data['image']);
+            if (data.hasOwnProperty('images')) {
+                obj['images'] = ApiClient.convertToType(data['images'], [ReviewImage]);
             }
             if (data.hasOwnProperty('spot')) {
                 obj['spot'] = Spot.constructFromObject(data['spot']);
@@ -125,9 +125,9 @@ Review.prototype['comment'] = undefined;
 Review.prototype['comments'] = undefined;
 
 /**
- * @member {module:model/ReviewImage} image
+ * @member {Array.<module:model/ReviewImage>} images
  */
-Review.prototype['image'] = undefined;
+Review.prototype['images'] = undefined;
 
 /**
  * @member {module:model/Spot} spot
