@@ -1755,9 +1755,6 @@ components:
         url:
           type: string
           example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
-        file_name:
-          type: string
-          example: substitute.png
         thumbnail_url:
           type: string
           example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
@@ -1780,8 +1777,10 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Comment"
-        image:
-          $ref: "#/components/schemas/ReviewImage"
+        images:
+          type: array
+          items:
+            $ref: "#/components/schemas/ReviewImage"
         spot:
           $ref: "#/components/schemas/Spot"
         map:
