@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **author** | [**Author**](Author.md) |  | [optional] 
 **comment** | **String** |  | [optional] 
 **comments** | [**[Comment]**](Comment.md) |  | [optional] 
-**image** | [**ReviewImage**](ReviewImage.md) |  | [optional] 
+**images** | [**[ReviewImage]**](ReviewImage.md) |  | [optional] 
 **spot** | [**Spot**](Spot.md) |  | [optional] 
 **map** | [**ReviewMap**](ReviewMap.md) |  | [optional] 
 **editable** | **Boolean** |  | [optional] 
