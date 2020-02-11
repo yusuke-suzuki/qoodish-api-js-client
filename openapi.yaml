@@ -3,7 +3,7 @@ info:
   title: Qoodish API
   description: |
     Qoodish API JavaScript Client.
-  version: 0.2.0
+  version: 0.2.1
 tags:
   - name: Users
     description: Manage user resources.
@@ -1820,9 +1820,10 @@ components:
         place_id:
           type: string
           example: ChIJl4BYvuq3t4kRfUzigrEUfUo
-        image_url:
-          type: string
-          example: https://s3-ap-northeast-1.amazonaws.com/qoodish/substitute.png
+        images:
+          type: array
+          items:
+            $ref: "#/components/schemas/ReviewImage"
     Notification:
       type: object
       description: Notification object.
