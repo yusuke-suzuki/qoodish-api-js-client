@@ -1,7 +1,7 @@
 version: "3"
 services:
   generator:
-    image: openapitools/openapi-generator-cli:v4.2.2
+    image: openapitools/openapi-generator-cli:v4.3.0
     volumes:
       - .:/local
     command:
@@ -15,7 +15,7 @@ services:
       - -c
       - /local/config.json
   validator:
-    image: openapitools/openapi-generator-cli:v4.2.2
+    image: openapitools/openapi-generator-cli:v4.3.0
     volumes:
       - .:/local
     command:
