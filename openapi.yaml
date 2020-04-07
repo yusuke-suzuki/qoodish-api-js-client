@@ -1535,6 +1535,8 @@ components:
       type: object
       description: User created Map object.
       properties:
+        image_url:
+          type: string
         name:
           type: string
           example: My map
