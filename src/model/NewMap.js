@@ -48,6 +48,9 @@ class NewMap {
         if (data) {
             obj = obj || new NewMap();
 
+            if (data.hasOwnProperty('image_url')) {
+                obj['image_url'] = ApiClient.convertToType(data['image_url'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -75,6 +78,11 @@ class NewMap {
 
 
 }
+
+/**
+ * @member {String} image_url
+ */
+NewMap.prototype['image_url'] = undefined;
 
 /**
  * @member {String} name

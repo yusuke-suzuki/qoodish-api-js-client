@@ -1,7 +1,7 @@
 steps:
-  - name: "gcr.io/$PROJECT_ID/docker-compose"
-    entrypoint: "bash"
+  - name: docker/compose:alpine-1.25.4
+    entrypoint: sh
     args:
-      - "-c"
+      - -c
       - |
         docker-compose run validator
