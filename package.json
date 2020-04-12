@@ -1,6 +1,6 @@
 {
   "name": "@yusuke-suzuki/qoodish-api-js-client",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Qoodish_API_JavaScript_Client_",
   "license": "Unlicense",
   "main": "dist/index.js",
