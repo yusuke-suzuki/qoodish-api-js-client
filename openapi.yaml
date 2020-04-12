@@ -3,7 +3,7 @@ info:
   title: Qoodish API
   description: |
     Qoodish API JavaScript Client.
-  version: 0.2.3
+  version: 0.2.4
 tags:
   - name: Users
     description: Manage user resources.
@@ -542,6 +542,41 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Spot"
+        401:
+          description: Authentication has failed.
+        404:
+          description: Resource not found.
+  /maps/{map_id}/spots/{place_id}/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Fetch reviews on spot
+      description: |
+        Fetch reviews on spot.
+      parameters:
+        - name: map_id
+          in: path
+          required: true
+          description: A valid Map ID.
+          example: 1
+          schema:
+            type: integer
+        - name: place_id
+          in: path
+          required: true
+          description: A valid Place ID.
+          example: ml8RkRdpmMmn4WY
+          schema:
+            type: string
+      responses:
+        200:
+          description: Request was successful.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
         401:
           description: Authentication has failed.
         404:

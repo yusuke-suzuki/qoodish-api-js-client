@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**mapsMapIdReviewsGet**](ReviewsApi.md#mapsMapIdReviewsGet) | **GET** /maps/{map_id}/reviews | Fetch map reviews
 [**mapsMapIdReviewsPost**](ReviewsApi.md#mapsMapIdReviewsPost) | **POST** /maps/{map_id}/reviews | Create review
 [**mapsMapIdReviewsReviewIdGet**](ReviewsApi.md#mapsMapIdReviewsReviewIdGet) | **GET** /maps/{map_id}/reviews/{review_id} | Fetch review
+[**mapsMapIdSpotsPlaceIdReviewsGet**](ReviewsApi.md#mapsMapIdSpotsPlaceIdReviewsGet) | **GET** /maps/{map_id}/spots/{place_id}/reviews | Fetch reviews on spot
 [**reviewsGet**](ReviewsApi.md#reviewsGet) | **GET** /reviews | Fetch reviews
 [**reviewsReviewIdDelete**](ReviewsApi.md#reviewsReviewIdDelete) | **DELETE** /reviews/{review_id} | Delete review
 [**reviewsReviewIdPut**](ReviewsApi.md#reviewsReviewIdPut) | **PUT** /reviews/{review_id} | Update review
@@ -165,6 +166,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Review**](Review.md)
+
+### Authorization
+
+[firebaseAuth](../README.md#firebaseAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## mapsMapIdSpotsPlaceIdReviewsGet
+
+> [Review] mapsMapIdSpotsPlaceIdReviewsGet(mapId, placeId)
+
+Fetch reviews on spot
+
+Fetch reviews on spot. 
+
+### Example
+
+```javascript
+import QoodishApiJsClient from '@yusuke-suzuki/qoodish-api-js-client';
+let defaultClient = QoodishApiJsClient.ApiClient.instance;
+// Configure API key authorization: firebaseAuth
+let firebaseAuth = defaultClient.authentications['firebaseAuth'];
+firebaseAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//firebaseAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new QoodishApiJsClient.ReviewsApi();
+let mapId = 1; // Number | A valid Map ID.
+let placeId = ml8RkRdpmMmn4WY; // String | A valid Place ID.
+apiInstance.mapsMapIdSpotsPlaceIdReviewsGet(mapId, placeId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapId** | **Number**| A valid Map ID. | 
+ **placeId** | **String**| A valid Place ID. | 
+
+### Return type
+
+[**[Review]**](Review.md)
 
 ### Authorization
 
